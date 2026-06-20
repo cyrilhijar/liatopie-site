@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+
+locale: fr
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Page d'accueil
+        file: src/content/home.json
+        fields:
+          - label: Hero - Titre
+            name: hero_title
+            widget: string
+          - label: Hero - Sous-titre
+            name: hero_subtitle
+            widget: text
+          - label: Pourquoi - Titre de section
+            name: pourquoi_title
+            widget: string
+          - label: Pourquoi - Intro
+            name: pourquoi_intro
+            widget: text
+          - label: Pour qui - Titre
+            name: pourqui_title
+            widget: string
+          - label: Comment - Titre
+            name: comment_title
+            widget: string
+          - label: Contact - Titre
+            name: contact_title
+            widget: string
+          - label: Contact - Sous-titre
+            name: contact_subtitle
+            widget: string

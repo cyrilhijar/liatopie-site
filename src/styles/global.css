@@ -1,0 +1,101 @@
+/* Design System Liatopie v1.0 */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600&family=Source+Sans+Pro:wght@400;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --petrole:  #004565;
+  --ivoire:   #F3F1ED;
+  --cuivre:   #BE6E2A;
+  --slate:    #5B9AA0;
+  --graphite: #2C2C2A;
+
+  --font-heading: 'Sora', sans-serif;
+  --font-body:    'Source Sans Pro', sans-serif;
+
+  --sp1: 0.5rem;   /* 8px  */
+  --sp2: 1rem;     /* 16px */
+  --sp3: 1.5rem;   /* 24px */
+  --sp4: 2rem;     /* 32px */
+  --sp5: 3rem;     /* 48px */
+  --sp6: 4rem;     /* 64px */
+  --sp7: 5rem;     /* 80px */
+
+  --max-w: 1200px;
+  --r-sm: 4px; --r-md: 6px; --r-lg: 8px;
+  --shadow:       0 1px 3px rgba(0,0,0,0.08);
+  --shadow-hover: 0 6px 20px rgba(0,0,0,0.13);
+  --tr: 200ms ease-in-out;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--graphite);
+  background-color: var(--ivoire);
+}
+
+h1, h2, h3 { font-family: var(--font-heading); font-weight: 600; color: var(--petrole); }
+h1 { font-size: clamp(1.75rem, 4vw, 2.75rem); line-height: 1.15; }
+h2 { font-size: clamp(1.375rem, 3vw, 2rem);   line-height: 1.25; }
+h3 { font-size: 1.125rem; line-height: 1.4; }
+
+p { margin-bottom: var(--sp2); }
+p:last-child { margin-bottom: 0; }
+a { color: var(--petrole); transition: color var(--tr); }
+a:hover { color: var(--cuivre); }
+
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--sp3); }
+.section    { padding: var(--sp7) 0; }
+.section--white  { background: #fff; }
+.section--ivoire { background: var(--ivoire); }
+.section--petrole { background: var(--petrole); }
+.section--petrole h2, .section--petrole h3, .section--petrole p { color: var(--ivoire); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: var(--sp1);
+  padding: 12px 24px; border-radius: var(--r-md);
+  font-family: var(--font-body); font-size: 1rem; font-weight: 600;
+  text-decoration: none; cursor: pointer; border: 2px solid transparent;
+  transition: all var(--tr); min-height: 44px; line-height: 1;
+}
+.btn-primary  { background: var(--petrole); color: var(--ivoire); border-color: var(--petrole); }
+.btn-primary:hover  { background: var(--graphite); border-color: var(--graphite); color: var(--ivoire); }
+.btn-secondary { background: transparent; color: var(--petrole); border-color: var(--petrole); }
+.btn-secondary:hover { background: rgba(0,69,101,0.06); color: var(--petrole); }
+
+/* Cards */
+.card {
+  background: #fff; border: 1px solid rgba(91,154,160,0.3);
+  border-radius: var(--r-lg); padding: var(--sp3); box-shadow: var(--shadow);
+  transition: box-shadow var(--tr), transform var(--tr);
+}
+.card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+
+/* Forms */
+.form-label { font-size: 0.875rem; font-weight: 600; color: var(--graphite); margin-bottom: 4px; display: block; }
+.form-input, .form-textarea {
+  font-family: var(--font-body); font-size: 1rem; color: var(--graphite);
+  background: #fff; border: 1px solid var(--slate); border-radius: var(--r-sm);
+  padding: 8px 12px; width: 100%;
+  transition: border-color var(--tr), box-shadow var(--tr);
+}
+.form-input:focus, .form-textarea:focus {
+  outline: none; border-color: var(--petrole);
+  box-shadow: 0 0 0 2px rgba(91,154,160,0.2);
+}
+.form-textarea { resize: vertical; min-height: 120px; }
+
+@media (max-width: 767px) {
+  .container { padding: 0 0.75rem; }
+  .section    { padding: var(--sp5) 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  html { scroll-behavior: auto; }
+}

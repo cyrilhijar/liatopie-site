@@ -1,0 +1,230 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Politique de confidentialité — Liatopie"
+  description="Comment Liatopie collecte et traite vos données personnelles, conformément au RGPD."
+>
+
+<header class="legal-header">
+  <div class="container legal-header-inner">
+    <a href="/" class="logo-text" aria-label="Retour à l'accueil">LIATOPIE</a>
+    <a href="/" class="back-link">← Retour à l'accueil</a>
+  </div>
+</header>
+
+<main class="legal-main">
+  <div class="container legal-container">
+
+    <h1>Politique de confidentialité</h1>
+    <p class="legal-update">Dernière mise à jour : juin 2026 · Conforme au Règlement (UE) 2016/679 (RGPD)</p>
+
+    <section>
+      <h2>Responsable du traitement</h2>
+      <p>
+        Le responsable du traitement des données collectées sur liatopie.fr est :
+      </p>
+      <address>
+        SARL Ecotopie — Liatopie<br />
+        11 rue du Fillaul, 31130 Pin-Balma<br />
+        Email : <a href="mailto:cyril@liatopie.fr">cyril@liatopie.fr</a>
+      </address>
+    </section>
+
+    <section>
+      <h2>Données collectées</h2>
+      <p>
+        Le seul formulaire actif sur ce site est le <strong>formulaire de contact</strong>.
+        Il collecte les données suivantes :
+      </p>
+      <ul>
+        <li><strong>Nom</strong> (obligatoire) : identification de la personne qui nous contacte</li>
+        <li><strong>Adresse email</strong> (obligatoire) : vous répondre</li>
+        <li><strong>Numéro de téléphone</strong> (optionnel) : faciliter un échange si vous le souhaitez</li>
+        <li><strong>Message</strong> (obligatoire) : comprendre votre demande</li>
+      </ul>
+      <p>
+        Aucune autre donnée n'est collectée de façon automatique lors de votre navigation
+        (pas de cookie de tracking, pas de Google Analytics, pas de pixel publicitaire).
+      </p>
+    </section>
+
+    <section>
+      <h2>Finalité et base légale</h2>
+      <p>
+        Les données du formulaire de contact sont utilisées exclusivement pour
+        <strong>répondre à votre demande d'information</strong> sur les services Liatopie.
+      </p>
+      <p>
+        La base légale est votre <strong>consentement</strong> (article 6(1)(a) du RGPD),
+        matérialisé par l'envoi volontaire du formulaire.
+      </p>
+      <p>
+        Vos données ne sont ni vendues, ni louées, ni transmises à des tiers à des fins commerciales.
+      </p>
+    </section>
+
+    <section>
+      <h2>Durée de conservation</h2>
+      <p>
+        Les données soumises via le formulaire de contact sont conservées le temps nécessaire
+        au traitement de votre demande et au suivi commercial éventuel,
+        dans la limite de <strong>3 ans</strong> à compter du dernier contact.
+      </p>
+    </section>
+
+    <section>
+      <h2>Hébergement des données</h2>
+      <p>
+        Le formulaire de contact est traité par <strong>Netlify, Inc.</strong>
+        (44 Montgomery Street, Suite 300, San Francisco, CA 94104 — États-Unis).
+        Le transfert de données vers les États-Unis est encadré par les clauses contractuelles
+        types de la Commission européenne.
+      </p>
+      <p>
+        Netlify publie sa politique de confidentialité à l'adresse :
+        <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">netlify.com/privacy</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Cookies et traceurs</h2>
+      <p>
+        Ce site n'utilise <strong>aucun cookie de tracking ou de publicité</strong>.
+      </p>
+      <p>
+        Un cookie technique peut être posé par Netlify Identity dans le cadre de l'administration
+        du site (accès réservé à l'équipe Liatopie). Il n'est pas accessible aux visiteurs.
+      </p>
+    </section>
+
+    <section>
+      <h2>Vos droits</h2>
+      <p>
+        Conformément au RGPD, vous disposez des droits suivants sur vos données personnelles :
+      </p>
+      <ul>
+        <li><strong>Droit d'accès</strong> : obtenir une copie des données que nous détenons sur vous</li>
+        <li><strong>Droit de rectification</strong> : corriger des données inexactes</li>
+        <li><strong>Droit à l'effacement</strong> : demander la suppression de vos données</li>
+        <li><strong>Droit d'opposition</strong> : vous opposer à un traitement</li>
+        <li><strong>Droit à la portabilité</strong> : recevoir vos données dans un format structuré</li>
+      </ul>
+      <p>
+        Pour exercer ces droits, contactez-nous à :
+        <a href="mailto:cyril@liatopie.fr">cyril@liatopie.fr</a>
+      </p>
+      <p>
+        En cas de réponse insatisfaisante, vous pouvez introduire une réclamation auprès de la
+        <strong>CNIL</strong> : <a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Modifications</h2>
+      <p>
+        Cette politique peut être mise à jour pour refléter l'évolution des pratiques de Liatopie
+        ou des obligations légales. La date de dernière mise à jour est indiquée en haut de page.
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="legal-footer">
+  <div class="container">
+    <p>© 2026 Liatopie · SARL Ecotopie ·
+      <a href="/mentions-legales">Mentions légales</a> ·
+      <a href="/politique-de-confidentialite">Politique de confidentialité</a>
+    </p>
+  </div>
+</footer>
+
+</Layout>
+
+<style>
+.legal-header {
+  background: var(--petrole);
+  padding: 0 var(--sp3);
+  height: 68px;
+}
+.legal-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.back-link {
+  color: rgba(243,241,237,0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color var(--tr);
+}
+.back-link:hover { color: var(--ivoire); }
+
+.legal-main {
+  padding: var(--sp6) 0;
+  background: var(--ivoire);
+  min-height: 70vh;
+}
+.legal-container { max-width: 720px; }
+
+.legal-main h1 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  margin-bottom: var(--sp1);
+}
+.legal-update {
+  font-size: 0.875rem;
+  color: var(--slate);
+  margin-bottom: var(--sp5);
+}
+
+.legal-main section {
+  margin-bottom: var(--sp5);
+  padding-bottom: var(--sp4);
+  border-bottom: 1px solid rgba(91,154,160,0.15);
+}
+.legal-main section:last-child { border-bottom: none; }
+
+.legal-main h2 {
+  font-size: 1.125rem;
+  margin-bottom: var(--sp2);
+  color: var(--petrole);
+}
+.legal-main p { margin-bottom: var(--sp2); }
+
+.legal-main ul {
+  margin: var(--sp1) 0 var(--sp2) var(--sp3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp1);
+}
+.legal-main ul li { line-height: 1.6; }
+
+.legal-main address {
+  font-style: normal;
+  background: rgba(91,154,160,0.08);
+  border-left: 3px solid var(--slate);
+  padding: var(--sp2) var(--sp3);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  margin-bottom: var(--sp2);
+  line-height: 1.8;
+}
+
+.legal-footer {
+  background: var(--graphite);
+  padding: var(--sp3);
+  text-align: center;
+}
+.legal-footer p {
+  font-size: 0.8125rem;
+  color: rgba(243,241,237,0.5);
+  margin: 0;
+}
+.legal-footer a {
+  color: rgba(243,241,237,0.7);
+  text-decoration: none;
+}
+.legal-footer a:hover { color: var(--ivoire); }
+</style>

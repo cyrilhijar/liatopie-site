@@ -1,0 +1,188 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Mentions légales — Liatopie"
+  description="Mentions légales du site liatopie.fr, édité par la SARL Ecotopie."
+>
+
+<header class="legal-header">
+  <div class="container legal-header-inner">
+    <a href="/" class="logo-text" aria-label="Retour à l'accueil">LIATOPIE</a>
+    <a href="/" class="back-link">← Retour à l'accueil</a>
+  </div>
+</header>
+
+<main class="legal-main">
+  <div class="container legal-container">
+
+    <h1>Mentions légales</h1>
+    <p class="legal-update">Dernière mise à jour : juin 2026</p>
+
+    <section>
+      <h2>Éditeur du site</h2>
+      <p>
+        Le site <strong>liatopie.fr</strong> est édité par la société <strong>SARL Ecotopie</strong>,
+        dont le siège social est situé au :
+      </p>
+      <address>
+        SARL Ecotopie<br />
+        11 rue du Fillaul<br />
+        31130 Pin-Balma<br />
+        France
+      </address>
+      <p>
+        SIRET : 899 707 772 00013<br />
+        Capital social : 1 000 € — RCS Toulouse 899 707 772<br />
+        Email : <a href="mailto:cyril@liatopie.fr">cyril@liatopie.fr</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Directeur de la publication</h2>
+      <p>
+        Le directeur de la publication est <strong>Cyril Hijar</strong>,
+        co-gérant de la SARL Ecotopie.
+      </p>
+    </section>
+
+    <section>
+      <h2>Hébergement</h2>
+      <p>
+        Le site est hébergé par <strong>Netlify, Inc.</strong><br />
+        44 Montgomery Street, Suite 300<br />
+        San Francisco, CA 94104 — États-Unis<br />
+        <a href="https://www.netlify.com" target="_blank" rel="noopener">netlify.com</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Propriété intellectuelle</h2>
+      <p>
+        L'ensemble des contenus présents sur liatopie.fr (textes, graphiques, logotype, structure)
+        est la propriété exclusive de la SARL Ecotopie, sauf mention contraire.
+        Toute reproduction, représentation, modification ou exploitation sans autorisation écrite préalable est interdite.
+      </p>
+    </section>
+
+    <section>
+      <h2>Limitation de responsabilité</h2>
+      <p>
+        Liatopie s'efforce de maintenir les informations publiées sur ce site à jour et exactes.
+        Cependant, des erreurs ou omissions peuvent survenir. L'utilisateur est seul responsable
+        de l'usage qu'il fait des informations disponibles sur ce site.
+      </p>
+      <p>
+        Liatopie ne peut être tenue responsable des dommages directs ou indirects causés
+        par l'utilisation du site ou par l'inaccessibilité temporaire du service.
+      </p>
+    </section>
+
+    <section>
+      <h2>Liens hypertextes</h2>
+      <p>
+        Le site peut contenir des liens vers des sites tiers. Liatopie n'exerce aucun contrôle
+        sur ces sites et décline toute responsabilité quant à leur contenu.
+      </p>
+    </section>
+
+    <section>
+      <h2>Droit applicable</h2>
+      <p>
+        Les présentes mentions légales sont soumises au droit français.
+        En cas de litige, les tribunaux français seront seuls compétents.
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<footer class="legal-footer">
+  <div class="container">
+    <p>© 2026 Liatopie · SARL Ecotopie ·
+      <a href="/mentions-legales">Mentions légales</a> ·
+      <a href="/politique-de-confidentialite">Politique de confidentialité</a>
+    </p>
+  </div>
+</footer>
+
+</Layout>
+
+<style>
+.legal-header {
+  background: var(--petrole);
+  padding: 0 var(--sp3);
+  height: 68px;
+}
+.legal-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.back-link {
+  color: rgba(243,241,237,0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color var(--tr);
+}
+.back-link:hover { color: var(--ivoire); }
+
+.legal-main {
+  padding: var(--sp6) 0;
+  background: var(--ivoire);
+  min-height: 70vh;
+}
+.legal-container { max-width: 720px; }
+
+.legal-main h1 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  margin-bottom: var(--sp1);
+}
+.legal-update {
+  font-size: 0.875rem;
+  color: var(--slate);
+  margin-bottom: var(--sp5);
+}
+
+.legal-main section {
+  margin-bottom: var(--sp5);
+  padding-bottom: var(--sp4);
+  border-bottom: 1px solid rgba(91,154,160,0.15);
+}
+.legal-main section:last-child {
+  border-bottom: none;
+}
+.legal-main h2 {
+  font-size: 1.125rem;
+  margin-bottom: var(--sp2);
+  color: var(--petrole);
+}
+.legal-main p { margin-bottom: var(--sp2); }
+.legal-main address {
+  font-style: normal;
+  background: rgba(91,154,160,0.08);
+  border-left: 3px solid var(--slate);
+  padding: var(--sp2) var(--sp3);
+  border-radius: 0 var(--r-sm) var(--r-sm) 0;
+  margin-bottom: var(--sp2);
+  line-height: 1.8;
+}
+
+.legal-footer {
+  background: var(--graphite);
+  padding: var(--sp3);
+  text-align: center;
+}
+.legal-footer p {
+  font-size: 0.8125rem;
+  color: rgba(243,241,237,0.5);
+  margin: 0;
+}
+.legal-footer a {
+  color: rgba(243,241,237,0.7);
+  text-decoration: none;
+}
+.legal-footer a:hover { color: var(--ivoire); }
+</style>

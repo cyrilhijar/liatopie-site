@@ -1,0 +1,722 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const steps = [
+  {
+    num: '01',
+    tag: 'Premiers réflexes',
+    detail: '3h · Finançable OPCO',
+    body: 'Vos équipes comprennent l\'IA et s\'exercent sur leurs propres tâches. Elles reviennent avec des idées concrètes, pas des angoisses.',
+    deliverable: 'Livrable : liste des usages identifiés par les collaborateurs',
+  },
+  {
+    num: '02',
+    tag: 'Le cap',
+    detail: '7h · Finançable OPCO',
+    body: 'La direction cadre, pose les premières règles, comprend où l\'IA fait gagner du temps dans l\'entreprise.',
+    deliverable: 'Livrable : 3 usages prioritaires à tester sous 30 jours',
+  },
+  {
+    num: '03',
+    tag: 'Les règles du jeu',
+    detail: 'Demi-journée + rédaction',
+    body: 'Une charte d\'usage réelle et opposable. Qui peut faire quoi, avec quelles données, ce qu\'on ne confie jamais à la machine.',
+    deliverable: 'Livrable : document de charte daté, utilisable dès le lendemain',
+  },
+  {
+    num: '04',
+    tag: 'Premier résultat',
+    detail: 'Mission sur-mesure',
+    body: 'On choisit le meilleur outil disponible sur le marché pour votre cas. On installe, on forme, on passe la main. Résultat opérationnel, pas de dépendance.',
+    deliverable: 'Livrable : cas d\'usage déployé et équipes autonomes',
+  },
+  {
+    num: '05',
+    tag: 'Le Fil',
+    detail: 'Continu · Gratuit puis abonnement',
+    body: 'L\'IA change tous les mois. Vos équipes n\'ont pas le temps de surveiller tout ça. Le Fil, c\'est l\'espace en ligne où elles retrouvent leurs ressources, suivent ce qui change pour elles, progressent à leur rythme. On filtre l\'essentiel.',
+    deliverable: 'Gratuit pendant votre parcours. Abonnement annuel après.',
+  },
+];
+---
+
+<Layout>
+
+  <!-- ═══ NAVIGATION ═══════════════════════════════════════════════════════ -->
+  <header class="nav-header" id="top">
+    <div class="container nav-inner">
+      <a href="/#top" class="nav-logo" aria-label="Liatopie — accueil">
+        <span class="logo-text">LIATOPIE</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu" role="navigation">
+        <a href="/#approche">Notre approche</a>
+        <a href="/#pour-qui">Pour qui</a>
+        <a href="/#comment">Comment</a>
+        <a href="/#contact" class="btn btn-primary nav-cta">Parlons de votre entreprise</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ═══ HERO ══════════════════════════════════════════════════════════════ -->
+  <section class="hero section--ivoire" aria-labelledby="hero-title">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1 id="hero-title">
+          L'IA qui vous fait gagner du temps sans vous faire perdre la main.
+        </h1>
+        <p class="hero-subline">
+          Un cadre clair, vous savez où vont vos données, vos équipes qui montent en compétence, et les bons outils choisis pour vous.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Parlons de votre entreprise</a>
+          <a href="#comment" class="btn btn-secondary">Voir comment ça marche</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 420 380" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+          <!-- Fond -->
+          <rect x="20" y="20" width="380" height="340" rx="16" fill="#EAE7E2"/>
+          <!-- Ligne de cascade -->
+          <line x1="210" y1="60" x2="210" y2="320" stroke="#5B9AA0" stroke-width="2" stroke-dasharray="6 4"/>
+          <!-- Cercles étapes -->
+          <circle cx="210" cy="75"  r="28" fill="#004565"/>
+          <circle cx="210" cy="155" r="28" fill="#004565"/>
+          <circle cx="210" cy="235" r="28" fill="#BE6E2A"/>
+          <circle cx="210" cy="315" r="22" fill="#5B9AA0" opacity="0.7"/>
+          <!-- Labels -->
+          <rect x="250" y="60"  width="120" height="30" rx="6" fill="#004565" opacity="0.12"/>
+          <rect x="250" y="140" width="100" height="30" rx="6" fill="#004565" opacity="0.12"/>
+          <rect x="250" y="220" width="110" height="30" rx="6" fill="#BE6E2A" opacity="0.15"/>
+          <rect x="250" y="300" width="90"  height="30" rx="6" fill="#5B9AA0" opacity="0.2"/>
+          <!-- Chiffres -->
+          <text x="210" y="80"  text-anchor="middle" fill="#F3F1ED" font-family="Sora, sans-serif" font-size="14" font-weight="600">01</text>
+          <text x="210" y="160" text-anchor="middle" fill="#F3F1ED" font-family="Sora, sans-serif" font-size="14" font-weight="600">02</text>
+          <text x="210" y="240" text-anchor="middle" fill="#F3F1ED" font-family="Sora, sans-serif" font-size="14" font-weight="600">03</text>
+          <text x="210" y="320" text-anchor="middle" fill="#F3F1ED" font-family="Sora, sans-serif" font-size="11" font-weight="600">∞</text>
+          <!-- Petit badge OPCO -->
+          <rect x="40" y="60" width="70" height="24" rx="12" fill="#BE6E2A" opacity="0.9"/>
+          <text x="75" y="76" text-anchor="middle" fill="#F3F1ED" font-family="Source Sans Pro, sans-serif" font-size="11">OPCO ✓</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ POURQUOI LIATOPIE ════════════════════════════════════════════════ -->
+  <section id="approche" class="section section--white" aria-labelledby="approche-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="approche-title">Vos équipes utilisent déjà l'IA. Personne ne sait encore dans quelles limites.</h2>
+        <p class="section-intro">
+          Plus d'une PME sur deux utilisait l'IA en 2025. En ordre dispersé, sans règles, chacun avec ses propres outils. Ce n'est pas un retard. C'est une étape. Liatopie installe la méthode pour passer à la suivante.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="card">
+          <div class="card-icon card-icon--petrole">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Vos données utilisées en conscience</h3>
+          <p>Selon l'outil et ce que vous y tapez, vos données ne suivent pas le même chemin. On vous aide à comprendre ça concrètement, pour que chaque usage soit un choix délibéré, pas une prise de risque par défaut.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon card-icon--cuivre">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3>Vos équipes comprennent ce qu'elles font</h3>
+          <p>Pas une formation sur un bouton. Une montée en compétences qui dure : vos collaborateurs savent pourquoi, comment, et ils peuvent s'en passer si nécessaire.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon card-icon--slate">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+              <polyline points="17 6 23 6 23 12"/>
+            </svg>
+          </div>
+          <h3>Du temps gagné sur des vrais cas</h3>
+          <p>On part de la façon dont votre entreprise tourne pour trouver où l'IA fait vraiment la différence. Pas de promesse générique.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ POUR QUI ═════════════════════════════════════════════════════════ -->
+  <section id="pour-qui" class="section section--ivoire" aria-labelledby="pourqui-title">
+    <div class="container pourqui-inner">
+      <div class="pourqui-text">
+        <h2 id="pourqui-title">Pas fait pour les entreprises qui ont déjà quelqu'un pour ça.</h2>
+
+        <p>Vous dirigez une entreprise. Vos équipes ont déjà commencé à utiliser l'IA, chacun à sa façon, sans règles communes. Vous sentez qu'il faut cadrer tout ça. Mais identifier où l'IA crée vraiment de la valeur dans votre contexte, poser les règles qui valent quelque chose, former vos équipes sans improviser : c'est un travail à part entière, et personne ne le fait à votre place.</p>
+
+        <p class="stat-line">
+          <strong>65% des dirigeants de PME ne savent pas où l'IA créerait de la valeur dans leur entreprise.</strong>
+          Ce n'est pas un aveu de faiblesse. C'est la réalité d'un marché qui a avancé plus vite que les méthodes.
+          <cite>(Bpifrance, 2026)</cite>
+        </p>
+
+        <p>Le plus souvent, la gouvernance repose sur une seule personne, sans plan de formation, sans cadre formalisé. Ça tient jusqu'à ce que ça ne tienne plus.
+          <cite>(Alegria, 2026)</cite>
+        </p>
+      </div>
+
+      <aside class="pourqui-encart">
+        <blockquote>
+          <p>Un dirigeant sur trois demande aujourd'hui des directives claires pour adopter l'IA sans prendre de risque.</p>
+          <footer>
+            <cite>Sharp Europe, 2025</cite>
+            <strong>C'est précisément ce que Liatopie installe.</strong>
+          </footer>
+        </blockquote>
+      </aside>
+    </div>
+  </section>
+
+
+  <!-- ═══ COMMENT ══════════════════════════════════════════════════════════ -->
+  <section id="comment" class="section section--white" aria-labelledby="comment-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="comment-title">Cinq étapes. À chaque fois, un livrable que vous gardez.</h2>
+        <p class="section-intro">
+          La cascade est conçue pour que vous puissiez vous arrêter à n'importe quelle étape avec quelque chose d'utile entre les mains.
+        </p>
+      </div>
+
+      <ol class="steps-list">
+        {steps.map((step) => (
+          <li class="step">
+            <div class="step-num">{step.num}</div>
+            <div class="step-content">
+              <div class="step-header">
+                <h3 class="step-tag">{step.tag}</h3>
+                <span class="step-detail">{step.detail}</span>
+              </div>
+              <p>{step.body}</p>
+              <p class="step-deliverable">{step.deliverable}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ═══ FORMULAIRE ═══════════════════════════════════════════════════════ -->
+  <section id="contact" class="section section--ivoire" aria-labelledby="contact-title">
+    <div class="container contact-inner">
+      <div class="contact-text">
+        <h2 id="contact-title">Un premier échange, pas un engagement.</h2>
+        <p>Dites-nous où vous en êtes. On vous répond sous 48h.</p>
+        <ul class="contact-list">
+          <li>Vous n'avez pas de projet précis ? Pas de problème.</li>
+          <li>Vous voulez juste comprendre si c'est fait pour vous ? C'est exactement ça.</li>
+        </ul>
+      </div>
+
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="contact-form"
+        id="form-contact"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <p style="display:none">
+          <label>Ne pas remplir si vous êtes humain : <input name="bot-field" /></label>
+        </p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="nom">Nom <span aria-hidden="true">*</span></label>
+            <input class="form-input" type="text" id="nom" name="nom" required autocomplete="name" placeholder="Votre nom" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email <span aria-hidden="true">*</span></label>
+            <input class="form-input" type="email" id="email" name="email" required autocomplete="email" placeholder="vous@entreprise.fr" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="telephone">Téléphone <span class="optional">(optionnel)</span></label>
+          <input class="form-input" type="tel" id="telephone" name="telephone" autocomplete="tel" placeholder="+33 6 00 00 00 00" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="message">Où en êtes-vous avec l'IA dans votre entreprise ? <span aria-hidden="true">*</span></label>
+          <textarea class="form-textarea" id="message" name="message" required rows="5" placeholder="Dites-nous en autant ou aussi peu que vous voulez."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER ════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text">LIATOPIE</span>
+        <p>Cabinet de transformation IA responsable, gouvernée et souveraine pour PME.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navigation secondaire">
+        <a href="/#approche">Notre approche</a>
+        <a href="/#pour-qui">Pour qui</a>
+        <a href="/#comment">Comment</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+
+      <div class="footer-legal">
+        <a href="/mentions-legales">Mentions légales</a>
+        <a href="/politique-de-confidentialite">Politique de confidentialité</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Liatopie · SARL Ecotopie · Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+</Layout>
+
+
+<style>
+/* ── Navigation ──────────────────────────────────────────────────────────── */
+.nav-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--petrole);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  gap: var(--sp3);
+}
+
+.nav-logo { text-decoration: none; }
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ivoire);
+  letter-spacing: 0.08em;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--sp3);
+}
+
+.nav-menu a {
+  color: rgba(243,241,237,0.85);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  transition: color var(--tr);
+}
+
+.nav-menu a:hover { color: var(--ivoire); }
+
+.nav-cta { color: var(--ivoire) !important; font-size: 0.875rem !important; padding: 8px 18px !important; }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--ivoire);
+  border-radius: 2px;
+  transition: all var(--tr);
+}
+
+/* ── Hero ────────────────────────────────────────────────────────────────── */
+.hero { padding: var(--sp7) 0; }
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp6);
+  align-items: center;
+}
+
+.hero-text { max-width: 560px; }
+
+.hero-text h1 { margin-bottom: var(--sp3); }
+
+.hero-subline {
+  font-size: 1.125rem;
+  color: var(--graphite);
+  margin-bottom: var(--sp4);
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--sp2);
+  flex-wrap: wrap;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-svg {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: var(--r-lg);
+}
+
+/* ── Section headers ─────────────────────────────────────────────────────── */
+.section-header { margin-bottom: var(--sp5); max-width: 700px; }
+.section-header h2 { margin-bottom: var(--sp2); }
+.section-intro { font-size: 1.0625rem; color: var(--graphite); }
+
+/* ── Cards grid ──────────────────────────────────────────────────────────── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp3);
+}
+
+.card-icon {
+  width: 52px; height: 52px;
+  border-radius: var(--r-md);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: var(--sp2);
+}
+
+.card-icon--petrole { background: rgba(0,69,101,0.1);  color: var(--petrole); }
+.card-icon--cuivre  { background: rgba(190,110,42,0.1); color: var(--cuivre); }
+.card-icon--slate   { background: rgba(91,154,160,0.15); color: var(--slate); }
+
+.card h3 { margin-bottom: var(--sp1); }
+
+/* ── Pour qui ────────────────────────────────────────────────────────────── */
+.pourqui-inner {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--sp6);
+  align-items: start;
+}
+
+.pourqui-text h2 { margin-bottom: var(--sp3); }
+.pourqui-text p { margin-bottom: var(--sp3); }
+
+.stat-line {
+  border-left: 3px solid var(--cuivre);
+  padding-left: var(--sp2);
+  font-size: 1rem;
+}
+
+cite {
+  display: block;
+  font-style: normal;
+  font-size: 0.8125rem;
+  color: var(--slate);
+  margin-top: 4px;
+}
+
+.pourqui-encart {
+  position: sticky;
+  top: 88px;
+}
+
+.pourqui-encart blockquote {
+  background: var(--petrole);
+  color: var(--ivoire);
+  border-radius: var(--r-lg);
+  padding: var(--sp3);
+  font-style: normal;
+}
+
+.pourqui-encart blockquote p {
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  margin-bottom: var(--sp2);
+  color: var(--ivoire);
+}
+
+.pourqui-encart blockquote footer {
+  border-top: 1px solid rgba(243,241,237,0.2);
+  padding-top: var(--sp2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp1);
+}
+
+.pourqui-encart blockquote footer cite {
+  color: rgba(243,241,237,0.65);
+  font-size: 0.8125rem;
+}
+
+.pourqui-encart blockquote footer strong {
+  color: var(--ivoire);
+  font-size: 0.9375rem;
+}
+
+/* ── Steps ───────────────────────────────────────────────────────────────── */
+.steps-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  max-width: 760px;
+}
+
+.steps-list::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 56px;
+  bottom: 56px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--petrole), var(--slate));
+  opacity: 0.2;
+}
+
+.step {
+  display: flex;
+  gap: var(--sp3);
+  padding: var(--sp3) 0;
+  position: relative;
+}
+
+.step-num {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--petrole);
+  color: var(--ivoire);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.step:last-child .step-num {
+  background: var(--slate);
+}
+
+.step-content { padding-top: 8px; }
+
+.step-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp2);
+  margin-bottom: var(--sp1);
+  flex-wrap: wrap;
+}
+
+.step-tag {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--petrole);
+  margin: 0;
+}
+
+.step-detail {
+  font-size: 0.8125rem;
+  color: var(--slate);
+  background: rgba(91,154,160,0.1);
+  padding: 2px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.step-deliverable {
+  margin-top: var(--sp1);
+  font-size: 0.875rem;
+  color: var(--cuivre);
+  font-weight: 600;
+}
+
+/* ── Contact ─────────────────────────────────────────────────────────────── */
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp6);
+  align-items: start;
+}
+
+.contact-text h2 { margin-bottom: var(--sp2); }
+.contact-text p { margin-bottom: var(--sp2); }
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp1);
+}
+
+.contact-list li::before {
+  content: '→ ';
+  color: var(--cuivre);
+  font-weight: 600;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp2);
+  background: #fff;
+  padding: var(--sp3);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp2);
+}
+
+.form-group { display: flex; flex-direction: column; gap: 4px; }
+
+.optional {
+  font-weight: 400;
+  color: var(--slate);
+  font-size: 0.8125rem;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+.footer { background: var(--graphite); color: var(--ivoire); }
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: var(--sp5);
+  align-items: start;
+  padding: var(--sp5) var(--sp3);
+}
+
+.footer-brand .logo-text { display: block; margin-bottom: var(--sp1); }
+.footer-brand p { font-size: 0.875rem; color: rgba(243,241,237,0.65); max-width: 280px; }
+
+.footer-nav, .footer-legal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp1);
+}
+
+.footer-nav a, .footer-legal a {
+  color: rgba(243,241,237,0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color var(--tr);
+}
+
+.footer-nav a:hover, .footer-legal a:hover { color: var(--ivoire); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(243,241,237,0.1);
+  padding: var(--sp2) var(--sp3);
+}
+
+.footer-bottom p {
+  font-size: 0.8125rem;
+  color: rgba(243,241,237,0.45);
+  margin: 0;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 1023px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+  .pourqui-inner { grid-template-columns: 1fr; }
+  .pourqui-encart { position: static; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 767px) {
+  .cards-grid { grid-template-columns: 1fr; }
+  .contact-inner { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: var(--petrole);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--sp2) var(--sp3) var(--sp3);
+    gap: var(--sp2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .nav-menu.is-open { display: flex; }
+  .nav-toggle { display: flex; }
+
+  .nav-cta { width: 100%; justify-content: center; }
+
+  .steps-list::before { left: 22px; }
+  .step-num { width: 44px; height: 44px; font-size: 0.875rem; }
+}
+</style>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const menu   = document.getElementById('navMenu');
+
+  toggle?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+
+  // Close menu on link click
+  menu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('is-open');
+      toggle?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>
