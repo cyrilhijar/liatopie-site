@@ -15,27 +15,64 @@ collections:
         label: Page d'accueil
         file: src/content/home.json
         fields:
-          - label: Hero - Titre
-            name: hero_title
-            widget: string
-          - label: Hero - Sous-titre
-            name: hero_subtitle
-            widget: text
-          - label: Pourquoi - Titre de section
-            name: pourquoi_title
-            widget: string
-          - label: Pourquoi - Intro
-            name: pourquoi_intro
-            widget: text
-          - label: Pour qui - Titre
-            name: pourqui_title
-            widget: string
-          - label: Comment - Titre
-            name: comment_title
-            widget: string
-          - label: Contact - Titre
-            name: contact_title
-            widget: string
-          - label: Contact - Sous-titre
-            name: contact_subtitle
-            widget: string
+
+          - label: "HERO"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Titre H1", name: title, widget: string }
+              - { label: "Sous-titre", name: subtitle, widget: text }
+              - { label: "Bouton principal", name: cta_primary, widget: string }
+              - { label: "Bouton secondaire", name: cta_secondary, widget: string }
+
+          - label: "POURQUOI LIATOPIE"
+            name: pourquoi
+            widget: object
+            fields:
+              - { label: "Titre de section", name: title, widget: string }
+              - { label: "Introduction", name: intro, widget: text }
+              - label: "Cartes (3)"
+                name: cards
+                widget: list
+                fields:
+                  - { label: "Titre", name: titre, widget: string }
+                  - { label: "Corps", name: corps, widget: text }
+
+          - label: "POUR QUI"
+            name: pour_qui
+            widget: object
+            fields:
+              - { label: "Titre", name: titre, widget: string }
+              - { label: "Paragraphe 1", name: corps_1, widget: text }
+              - { label: "Stat — texte", name: stat_texte, widget: text }
+              - { label: "Stat — source", name: stat_source, widget: string }
+              - { label: "Paragraphe 2", name: corps_2, widget: text }
+              - { label: "Paragraphe 2 — source", name: corps_2_source, widget: string }
+              - { label: "Encart — citation", name: encart_quote, widget: text }
+              - { label: "Encart — source", name: encart_source, widget: string }
+              - { label: "Encart — accroche finale", name: encart_cta, widget: string }
+
+          - label: "COMMENT ÇA MARCHE"
+            name: comment
+            widget: object
+            fields:
+              - { label: "Titre", name: titre, widget: string }
+              - { label: "Introduction", name: intro, widget: text }
+              - label: "Étapes (5)"
+                name: etapes
+                widget: list
+                fields:
+                  - { label: "Numéro", name: num, widget: string }
+                  - { label: "Nom de l'étape", name: tag, widget: string }
+                  - { label: "Détail (durée / financement)", name: detail, widget: string }
+                  - { label: "Description", name: corps, widget: text }
+                  - { label: "Livrable", name: livrable, widget: string }
+
+          - label: "FORMULAIRE CONTACT"
+            name: contact
+            widget: object
+            fields:
+              - { label: "Titre", name: titre, widget: string }
+              - { label: "Sous-titre", name: sous_titre, widget: string }
+              - { label: "Item liste 1", name: item_1, widget: string }
+              - { label: "Item liste 2", name: item_2, widget: string }

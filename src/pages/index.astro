@@ -1,43 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import cms from '../content/home.json';
 
-const steps = [
-  {
-    num: '01',
-    tag: 'Premiers réflexes',
-    detail: '3h · Finançable OPCO',
-    body: 'Vos équipes comprennent l\'IA et s\'exercent sur leurs propres tâches. Elles reviennent avec des idées concrètes, pas des angoisses.',
-    deliverable: 'Livrable : liste des usages identifiés par les collaborateurs',
-  },
-  {
-    num: '02',
-    tag: 'Le cap',
-    detail: '7h · Finançable OPCO',
-    body: 'La direction cadre, pose les premières règles, comprend où l\'IA fait gagner du temps dans l\'entreprise.',
-    deliverable: 'Livrable : 3 usages prioritaires à tester sous 30 jours',
-  },
-  {
-    num: '03',
-    tag: 'Les règles du jeu',
-    detail: 'Demi-journée + rédaction',
-    body: 'Une charte d\'usage réelle et opposable. Qui peut faire quoi, avec quelles données, ce qu\'on ne confie jamais à la machine.',
-    deliverable: 'Livrable : document de charte daté, utilisable dès le lendemain',
-  },
-  {
-    num: '04',
-    tag: 'Premier résultat',
-    detail: 'Mission sur-mesure',
-    body: 'On choisit le meilleur outil disponible sur le marché pour votre cas. On installe, on forme, on passe la main. Résultat opérationnel, pas de dépendance.',
-    deliverable: 'Livrable : cas d\'usage déployé et équipes autonomes',
-  },
-  {
-    num: '05',
-    tag: 'Le Fil',
-    detail: 'Continu · Gratuit puis abonnement',
-    body: 'L\'IA change tous les mois. Vos équipes n\'ont pas le temps de surveiller tout ça. Le Fil, c\'est l\'espace en ligne où elles retrouvent leurs ressources, suivent ce qui change pour elles, progressent à leur rythme. On filtre l\'essentiel.',
-    deliverable: 'Gratuit pendant votre parcours. Abonnement annuel après.',
-  },
-];
+const { hero, pourquoi, pour_qui, comment, contact } = cms;
+const steps = comment.etapes;
 ---
 
 <Layout>
@@ -68,14 +34,14 @@ const steps = [
     <div class="container hero-inner">
       <div class="hero-text">
         <h1 id="hero-title">
-          L'IA qui vous fait gagner du temps sans vous faire perdre la main.
+          {hero.title}
         </h1>
         <p class="hero-subline">
-          Un cadre clair, vous savez où vont vos données, vos équipes qui montent en compétence, et les bons outils choisis pour vous.
+          {hero.subtitle}
         </p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Parlons de votre entreprise</a>
-          <a href="#comment" class="btn btn-secondary">Voir comment ça marche</a>
+          <a href="#contact" class="btn btn-primary">{hero.cta_primary}</a>
+          <a href="#comment" class="btn btn-secondary">{hero.cta_secondary}</a>
         </div>
       </div>
 
@@ -113,9 +79,9 @@ const steps = [
   <section id="approche" class="section section--white" aria-labelledby="approche-title">
     <div class="container">
       <div class="section-header">
-        <h2 id="approche-title">Vos équipes utilisent déjà l'IA. Personne ne sait encore dans quelles limites.</h2>
+        <h2 id="approche-title">{pourquoi.title}</h2>
         <p class="section-intro">
-          Plus d'une PME sur deux utilisait l'IA en 2025. En ordre dispersé, sans règles, chacun avec ses propres outils. Ce n'est pas un retard. C'est une étape. Liatopie installe la méthode pour passer à la suivante.
+          {pourquoi.intro}
         </p>
       </div>
 
@@ -126,8 +92,8 @@ const steps = [
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
           </div>
-          <h3>Vos données utilisées en conscience</h3>
-          <p>Selon l'outil et ce que vous y tapez, vos données ne suivent pas le même chemin. On vous aide à comprendre ça concrètement, pour que chaque usage soit un choix délibéré, pas une prise de risque par défaut.</p>
+          <h3>{pourquoi.cards[0].titre}</h3>
+          <p>{pourquoi.cards[0].corps}</p>
         </article>
 
         <article class="card">
@@ -139,8 +105,8 @@ const steps = [
               <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
             </svg>
           </div>
-          <h3>Vos équipes comprennent ce qu'elles font</h3>
-          <p>Pas une formation sur un bouton. Une montée en compétences qui dure : vos collaborateurs savent pourquoi, comment, et ils peuvent s'en passer si nécessaire.</p>
+          <h3>{pourquoi.cards[1].titre}</h3>
+          <p>{pourquoi.cards[1].corps}</p>
         </article>
 
         <article class="card">
@@ -150,8 +116,8 @@ const steps = [
               <polyline points="17 6 23 6 23 12"/>
             </svg>
           </div>
-          <h3>Du temps gagné sur des vrais cas</h3>
-          <p>On part de la façon dont votre entreprise tourne pour trouver où l'IA fait vraiment la différence. Pas de promesse générique.</p>
+          <h3>{pourquoi.cards[2].titre}</h3>
+          <p>{pourquoi.cards[2].corps}</p>
         </article>
       </div>
     </div>
@@ -162,27 +128,24 @@ const steps = [
   <section id="pour-qui" class="section section--ivoire" aria-labelledby="pourqui-title">
     <div class="container pourqui-inner">
       <div class="pourqui-text">
-        <h2 id="pourqui-title">Pas fait pour les entreprises qui ont déjà quelqu'un pour ça.</h2>
+        <h2 id="pourqui-title">{pour_qui.titre}</h2>
 
-        <p>Vous dirigez une entreprise. Vos équipes ont déjà commencé à utiliser l'IA, chacun à sa façon, sans règles communes. Vous sentez qu'il faut cadrer tout ça. Mais identifier où l'IA crée vraiment de la valeur dans votre contexte, poser les règles qui valent quelque chose, former vos équipes sans improviser : c'est un travail à part entière, et personne ne le fait à votre place.</p>
+        <p>{pour_qui.corps_1}</p>
 
         <p class="stat-line">
-          <strong>65% des dirigeants de PME ne savent pas où l'IA créerait de la valeur dans leur entreprise.</strong>
-          Ce n'est pas un aveu de faiblesse. C'est la réalité d'un marché qui a avancé plus vite que les méthodes.
-          <cite>(Bpifrance, 2026)</cite>
+          <strong>{pour_qui.stat_texte}</strong>
+          <cite>({pour_qui.stat_source})</cite>
         </p>
 
-        <p>Le plus souvent, la gouvernance repose sur une seule personne, sans plan de formation, sans cadre formalisé. Ça tient jusqu'à ce que ça ne tienne plus.
-          <cite>(Alegria, 2026)</cite>
-        </p>
+        <p>{pour_qui.corps_2} <cite>({pour_qui.corps_2_source})</cite></p>
       </div>
 
       <aside class="pourqui-encart">
         <blockquote>
-          <p>Un dirigeant sur trois demande aujourd'hui des directives claires pour adopter l'IA sans prendre de risque.</p>
+          <p>{pour_qui.encart_quote}</p>
           <footer>
-            <cite>Sharp Europe, 2025</cite>
-            <strong>C'est précisément ce que Liatopie installe.</strong>
+            <cite>{pour_qui.encart_source}</cite>
+            <strong>{pour_qui.encart_cta}</strong>
           </footer>
         </blockquote>
       </aside>
@@ -194,9 +157,9 @@ const steps = [
   <section id="comment" class="section section--white" aria-labelledby="comment-title">
     <div class="container">
       <div class="section-header">
-        <h2 id="comment-title">Cinq étapes. À chaque fois, un livrable que vous gardez.</h2>
+        <h2 id="comment-title">{comment.titre}</h2>
         <p class="section-intro">
-          La cascade est conçue pour que vous puissiez vous arrêter à n'importe quelle étape avec quelque chose d'utile entre les mains.
+          {comment.intro}
         </p>
       </div>
 
@@ -209,8 +172,8 @@ const steps = [
                 <h3 class="step-tag">{step.tag}</h3>
                 <span class="step-detail">{step.detail}</span>
               </div>
-              <p>{step.body}</p>
-              <p class="step-deliverable">{step.deliverable}</p>
+              <p>{step.corps}</p>
+              <p class="step-deliverable">{step.livrable}</p>
             </div>
           </li>
         ))}
@@ -223,11 +186,11 @@ const steps = [
   <section id="contact" class="section section--ivoire" aria-labelledby="contact-title">
     <div class="container contact-inner">
       <div class="contact-text">
-        <h2 id="contact-title">Un premier échange, pas un engagement.</h2>
-        <p>Dites-nous où vous en êtes. On vous répond sous 48h.</p>
+        <h2 id="contact-title">{contact.titre}</h2>
+        <p>{contact.sous_titre}</p>
         <ul class="contact-list">
-          <li>Vous n'avez pas de projet précis ? Pas de problème.</li>
-          <li>Vous voulez juste comprendre si c'est fait pour vous ? C'est exactement ça.</li>
+          <li>{contact.item_1}</li>
+          <li>{contact.item_2}</li>
         </ul>
       </div>
 
@@ -704,6 +667,12 @@ cite {
 </style>
 
 <script>
+  // Netlify Identity — redirect email tokens to /admin/
+  const hash = window.location.hash;
+  if (hash && (hash.includes('invite_token') || hash.includes('recovery_token') || hash.includes('confirmation_token'))) {
+    window.location.replace('/admin/' + hash);
+  }
+
   const toggle = document.getElementById('navToggle');
   const menu   = document.getElementById('navMenu');
 

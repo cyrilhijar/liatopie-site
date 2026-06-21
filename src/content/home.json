@@ -1,0 +1,84 @@
+{
+  "hero": {
+    "title": "L'IA qui vous fait gagner du temps sans vous faire perdre la main.",
+    "subtitle": "Un cadre clair, vous savez où vont vos données, vos équipes qui montent en compétence, et les bons outils choisis pour vous.",
+    "cta_primary": "Parlons de votre entreprise",
+    "cta_secondary": "Voir comment ça marche"
+  },
+  "pourquoi": {
+    "title": "Vos équipes utilisent déjà l'IA. Personne ne sait encore dans quelles limites.",
+    "intro": "Plus d'une PME sur deux utilisait l'IA en 2025. En ordre dispersé, sans règles, chacun avec ses propres outils. Ce n'est pas un retard. C'est une étape. Liatopie installe la méthode pour passer à la suivante.",
+    "cards": [
+      {
+        "titre": "Vos données utilisées en conscience",
+        "corps": "Selon l'outil et ce que vous y tapez, vos données ne suivent pas le même chemin. On vous aide à comprendre ça concrètement, pour que chaque usage soit un choix délibéré, pas une prise de risque par défaut."
+      },
+      {
+        "titre": "Vos équipes comprennent ce qu'elles font",
+        "corps": "Pas une formation sur un bouton. Une montée en compétences qui dure : vos collaborateurs savent pourquoi, comment, et ils peuvent s'en passer si nécessaire."
+      },
+      {
+        "titre": "Du temps gagné sur des vrais cas",
+        "corps": "On part de la façon dont votre entreprise tourne pour trouver où l'IA fait vraiment la différence. Pas de promesse générique."
+      }
+    ]
+  },
+  "pour_qui": {
+    "titre": "Pas fait pour les entreprises qui ont déjà quelqu'un pour ça.",
+    "corps_1": "Vous dirigez une entreprise. Vos équipes ont déjà commencé à utiliser l'IA, chacun à sa façon, sans règles communes. Vous sentez qu'il faut cadrer tout ça. Mais identifier où l'IA crée vraiment de la valeur dans votre contexte, poser les règles qui valent quelque chose, former vos équipes sans improviser : c'est un travail à part entière, et personne ne le fait à votre place.",
+    "stat_texte": "65% des dirigeants de PME ne savent pas où l'IA créerait de la valeur dans leur entreprise. Ce n'est pas un aveu de faiblesse. C'est la réalité d'un marché qui a avancé plus vite que les méthodes.",
+    "stat_source": "Bpifrance, 2026",
+    "corps_2": "Le plus souvent, la gouvernance repose sur une seule personne, sans plan de formation, sans cadre formalisé. Ça tient jusqu'à ce que ça ne tienne plus.",
+    "corps_2_source": "Alegria, 2026",
+    "encart_quote": "Un dirigeant sur trois demande aujourd'hui des directives claires pour adopter l'IA sans prendre de risque.",
+    "encart_source": "Sharp Europe, 2025",
+    "encart_cta": "C'est précisément ce que Liatopie installe."
+  },
+  "comment": {
+    "titre": "Cinq étapes. À chaque fois, un livrable que vous gardez.",
+    "intro": "La cascade est conçue pour que vous puissiez vous arrêter à n'importe quelle étape avec quelque chose d'utile entre les mains.",
+    "etapes": [
+      {
+        "num": "01",
+        "tag": "Premiers réflexes",
+        "detail": "3h · Finançable OPCO",
+        "corps": "Vos équipes comprennent l'IA et s'exercent sur leurs propres tâches. Elles reviennent avec des idées concrètes, pas des angoisses.",
+        "livrable": "Livrable : liste des usages identifiés par les collaborateurs"
+      },
+      {
+        "num": "02",
+        "tag": "Le cap",
+        "detail": "7h · Finançable OPCO",
+        "corps": "La direction cadre, pose les premières règles, comprend où l'IA fait gagner du temps dans l'entreprise.",
+        "livrable": "Livrable : 3 usages prioritaires à tester sous 30 jours"
+      },
+      {
+        "num": "03",
+        "tag": "Les règles du jeu",
+        "detail": "Demi-journée + rédaction",
+        "corps": "Une charte d'usage réelle et opposable. Qui peut faire quoi, avec quelles données, ce qu'on ne confie jamais à la machine.",
+        "livrable": "Livrable : document de charte daté, utilisable dès le lendemain"
+      },
+      {
+        "num": "04",
+        "tag": "Premier résultat",
+        "detail": "Mission sur-mesure",
+        "corps": "On choisit le meilleur outil disponible sur le marché pour votre cas. On installe, on forme, on passe la main. Résultat opérationnel, pas de dépendance.",
+        "livrable": "Livrable : cas d'usage déployé et équipes autonomes"
+      },
+      {
+        "num": "05",
+        "tag": "Le Fil",
+        "detail": "Continu · Gratuit puis abonnement",
+        "corps": "L'IA change tous les mois. Vos équipes n'ont pas le temps de surveiller tout ça. Le Fil, c'est l'espace en ligne où elles retrouvent leurs ressources, suivent ce qui change pour elles, progressent à leur rythme. On filtre l'essentiel.",
+        "livrable": "Gratuit pendant votre parcours. Abonnement annuel après."
+      }
+    ]
+  },
+  "contact": {
+    "titre": "Un premier échange, pas un engagement.",
+    "sous_titre": "Dites-nous où vous en êtes. On vous répond sous 48h.",
+    "item_1": "Vous n'avez pas de projet précis ? Pas de problème.",
+    "item_2": "Vous voulez juste comprendre si c'est fait pour vous ? C'est exactement ça."
+  }
+}
