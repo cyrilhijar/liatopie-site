@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import cms from '../content/home.json';
 
-const { hero, pourquoi, pour_qui, comment, contact } = cms;
+const { hero, pourquoi, pour_qui, comment, preuve_sociale, contact } = cms;
 const steps = comment.etapes;
 ---
 
@@ -41,7 +41,7 @@ const steps = comment.etapes;
         </p>
         <div class="hero-actions">
           <a href="#contact" class="btn btn-primary">{hero.cta_primary}</a>
-          <a href="#comment" class="btn btn-secondary">{hero.cta_secondary}</a>
+          <a href="#comment" class="btn-text">{hero.cta_secondary}</a>
         </div>
       </div>
 
@@ -118,6 +118,9 @@ const steps = comment.etapes;
           </div>
           <h3>{pourquoi.cards[2].titre}</h3>
           <p>{pourquoi.cards[2].corps}</p>
+          {pourquoi.cards[2].gain_phrase && (
+            <p class="card-gain">{pourquoi.cards[2].gain_phrase}</p>
+          )}
         </article>
       </div>
     </div>
@@ -159,6 +162,9 @@ const steps = comment.etapes;
       <div class="section-header">
         <h2 id="comment-title">{comment.titre}</h2>
         <p class="section-intro">
+          {comment.cascade_mecanisme}
+        </p>
+        <p class="section-intro section-intro--muted">
           {comment.intro}
         </p>
       </div>
@@ -174,16 +180,42 @@ const steps = comment.etapes;
               </div>
               <p>{step.corps}</p>
               <p class="step-deliverable">{step.livrable}</p>
+              {step.prix && (
+                <p class="step-prix">{step.prix}</p>
+              )}
             </div>
           </li>
         ))}
       </ol>
+
+      <p class="opco-note">{contact.opco_info}</p>
+    </div>
+  </section>
+
+
+  <!-- ═══ PREUVE SOCIALE ═══════════════════════════════════════════════════ -->
+  <section class="section section--ivoire" aria-labelledby="preuve-title">
+    <div class="container">
+      <div class="section-header">
+        <h2 id="preuve-title">{preuve_sociale.titre}</h2>
+        <p class="section-intro">{preuve_sociale.sous_titre}</p>
+      </div>
+
+      <div class="verbatims-grid">
+        {preuve_sociale.verbatims.map((v) => (
+          <blockquote class="verbatim">
+            <p>"{v}"</p>
+          </blockquote>
+        ))}
+      </div>
+
+      <p class="preuve-caution">{preuve_sociale.caution}</p>
     </div>
   </section>
 
 
   <!-- ═══ FORMULAIRE ═══════════════════════════════════════════════════════ -->
-  <section id="contact" class="section section--ivoire" aria-labelledby="contact-title">
+  <section id="contact" class="section section--white" aria-labelledby="contact-title">
     <div class="container contact-inner">
       <div class="contact-text">
         <h2 id="contact-title">{contact.titre}</h2>
@@ -203,7 +235,7 @@ const steps = comment.etapes;
         id="form-contact"
       >
         <input type="hidden" name="form-name" value="contact" />
-        <p style="display:none">
+        <p class="honeypot-field" aria-hidden="true">
           <label>Ne pas remplir si vous êtes humain : <input name="bot-field" /></label>
         </p>
 
@@ -239,7 +271,7 @@ const steps = comment.etapes;
     <div class="container footer-inner">
       <div class="footer-brand">
         <span class="logo-text">LIATOPIE</span>
-        <p>Cabinet de transformation IA responsable, gouvernée et souveraine pour PME.</p>
+        <p>On aide les PME à mettre l'IA au travail sans y perdre le contrôle, leurs données ni leur savoir-faire.</p>
       </div>
 
       <nav class="footer-nav" aria-label="Navigation secondaire">
@@ -351,8 +383,22 @@ const steps = comment.etapes;
 
 .hero-actions {
   display: flex;
-  gap: var(--sp2);
+  gap: var(--sp3);
   flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn-text {
+  font-size: 0.9375rem;
+  color: var(--petrole);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(0,69,101,0.4);
+  transition: text-decoration-color var(--tr);
+}
+
+.btn-text:hover {
+  text-decoration-color: var(--petrole);
 }
 
 .hero-visual {
@@ -371,7 +417,8 @@ const steps = comment.etapes;
 /* ── Section headers ─────────────────────────────────────────────────────── */
 .section-header { margin-bottom: var(--sp5); max-width: 700px; }
 .section-header h2 { margin-bottom: var(--sp2); }
-.section-intro { font-size: 1.0625rem; color: var(--graphite); }
+.section-intro { font-size: 1.0625rem; color: var(--graphite); margin-bottom: var(--sp2); }
+.section-intro--muted { font-size: 0.9375rem; color: var(--slate); }
 
 /* ── Cards grid ──────────────────────────────────────────────────────────── */
 .cards-grid {
@@ -392,6 +439,14 @@ const steps = comment.etapes;
 .card-icon--slate   { background: rgba(91,154,160,0.15); color: var(--slate); }
 
 .card h3 { margin-bottom: var(--sp1); }
+
+.card-gain {
+  margin-top: var(--sp2);
+  font-size: 0.9375rem;
+  color: var(--petrole);
+  font-style: italic;
+  line-height: 1.5;
+}
 
 /* ── Pour qui ────────────────────────────────────────────────────────────── */
 .pourqui-inner {
@@ -539,6 +594,52 @@ cite {
   font-weight: 600;
 }
 
+.step-prix {
+  margin-top: 4px;
+  font-size: 0.8125rem;
+  color: var(--graphite);
+  opacity: 0.75;
+}
+
+.opco-note {
+  margin-top: var(--sp4);
+  max-width: 680px;
+  font-size: 0.9375rem;
+  color: var(--slate);
+  border-left: 3px solid var(--slate);
+  padding-left: var(--sp2);
+}
+
+/* ── Preuve sociale ──────────────────────────────────────────────────────── */
+.verbatims-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp3);
+  margin-bottom: var(--sp4);
+}
+
+.verbatim {
+  background: #fff;
+  border-radius: var(--r-lg);
+  padding: var(--sp3);
+  box-shadow: var(--shadow);
+  font-style: normal;
+  border-left: 3px solid var(--slate);
+}
+
+.verbatim p {
+  font-size: 1rem;
+  color: var(--graphite);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.preuve-caution {
+  font-size: 0.875rem;
+  color: var(--slate);
+  max-width: 600px;
+}
+
 /* ── Contact ─────────────────────────────────────────────────────────────── */
 .contact-inner {
   display: grid;
@@ -571,6 +672,18 @@ cite {
   padding: var(--sp3);
   border-radius: var(--r-lg);
   box-shadow: var(--shadow);
+}
+
+.honeypot-field {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  tab-index: -1;
 }
 
 .form-row {
@@ -634,6 +747,7 @@ cite {
   .pourqui-inner { grid-template-columns: 1fr; }
   .pourqui-encart { position: static; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
+  .verbatims-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 767px) {

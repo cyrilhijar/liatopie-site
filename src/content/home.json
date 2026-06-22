@@ -19,14 +19,15 @@
       },
       {
         "titre": "Du temps gagné sur des vrais cas",
-        "corps": "On part de la façon dont votre entreprise tourne pour trouver où l'IA fait vraiment la différence. Pas de promesse générique."
+        "corps": "On part de la façon dont votre entreprise tourne pour trouver où l'IA fait vraiment la différence. Pas de promesse générique.",
+        "gain_phrase": "Le temps récupéré, vos équipes le rendent à vos clients et à votre coeur de métier, au lieu de le perdre dans les tâches répétitives."
       }
     ]
   },
   "pour_qui": {
     "titre": "Pas fait pour les entreprises qui ont déjà quelqu'un pour ça.",
     "corps_1": "Vous dirigez une entreprise. Vos équipes ont déjà commencé à utiliser l'IA, chacun à sa façon, sans règles communes. Vous sentez qu'il faut cadrer tout ça. Mais identifier où l'IA crée vraiment de la valeur dans votre contexte, poser les règles qui valent quelque chose, former vos équipes sans improviser : c'est un travail à part entière, et personne ne le fait à votre place.",
-    "stat_texte": "65% des dirigeants de PME ne savent pas où l'IA créerait de la valeur dans leur entreprise. Ce n'est pas un aveu de faiblesse. C'est la réalité d'un marché qui a avancé plus vite que les méthodes.",
+    "stat_texte": "65% des dirigeants de PME non-utilisateurs ne savent pas où l'IA créerait de la valeur dans leur entreprise. Ce n'est pas un aveu de faiblesse. C'est la réalité d'un marché qui a avancé plus vite que les méthodes.",
     "stat_source": "Bpifrance, 2026",
     "corps_2": "Le plus souvent, la gouvernance repose sur une seule personne, sans plan de formation, sans cadre formalisé. Ça tient jusqu'à ce que ça ne tienne plus.",
     "corps_2_source": "Alegria, 2026",
@@ -37,48 +38,66 @@
   "comment": {
     "titre": "Cinq étapes. À chaque fois, un livrable que vous gardez.",
     "intro": "La cascade est conçue pour que vous puissiez vous arrêter à n'importe quelle étape avec quelque chose d'utile entre les mains.",
+    "cascade_mecanisme": "Chaque étape vous laisse un livrable que vous utilisez seul, et ce livrable vous montre la marche suivante. Vous avancez à votre rythme, jamais dans le vide.",
     "etapes": [
       {
         "num": "01",
         "tag": "Premiers réflexes",
         "detail": "3h · Finançable OPCO",
         "corps": "Vos équipes comprennent l'IA et s'exercent sur leurs propres tâches. Elles reviennent avec des idées concrètes, pas des angoisses.",
-        "livrable": "Livrable : liste des usages identifiés par les collaborateurs"
+        "livrable": "Livrable : liste des usages identifiés par les collaborateurs",
+        "prix": "À partir de 380 € HT par personne en session inter-entreprises, finançable OPCO. Session dédiée à votre équipe (intra) à partir de 1 500 € HT."
       },
       {
         "num": "02",
         "tag": "Le cap",
         "detail": "7h · Finançable OPCO",
         "corps": "La direction cadre, pose les premières règles, comprend où l'IA fait gagner du temps dans l'entreprise.",
-        "livrable": "Livrable : 3 usages prioritaires à tester sous 30 jours"
+        "livrable": "Livrable : 3 usages prioritaires à tester sous 30 jours",
+        "prix": "À partir de 790 € HT par personne en inter, finançable OPCO. Intra à partir de 2 500 € HT."
       },
       {
         "num": "03",
         "tag": "Les règles du jeu",
         "detail": "Demi-journée + rédaction",
         "corps": "Une charte d'usage réelle et opposable. Qui peut faire quoi, avec quelles données, ce qu'on ne confie jamais à la machine.",
-        "livrable": "Livrable : document de charte daté, utilisable dès le lendemain"
+        "livrable": "Livrable : document de charte daté, utilisable dès le lendemain",
+        "prix": "2 000 € HT."
       },
       {
         "num": "04",
         "tag": "Premier résultat",
         "detail": "Mission sur-mesure",
         "corps": "On choisit le meilleur outil disponible sur le marché pour votre cas. On installe, on forme, on passe la main. Résultat opérationnel, pas de dépendance.",
-        "livrable": "Livrable : cas d'usage déployé et équipes autonomes"
+        "livrable": "Livrable : cas d'usage déployé et équipes autonomes",
+        "prix": "À partir de 2 000 € HT, selon la complexité du cas."
       },
       {
         "num": "05",
         "tag": "Le Fil",
         "detail": "Continu · Gratuit puis abonnement",
         "corps": "L'IA change tous les mois. Vos équipes n'ont pas le temps de surveiller tout ça. Le Fil, c'est l'espace en ligne où elles retrouvent leurs ressources, suivent ce qui change pour elles, progressent à leur rythme. On filtre l'essentiel.",
-        "livrable": "Gratuit pendant votre parcours. Abonnement annuel après."
+        "livrable": "Gratuit pendant votre parcours. Abonnement annuel après.",
+        "prix": "Gratuit pendant votre parcours, puis abonnement annuel."
       }
     ]
+  },
+  "preuve_sociale": {
+    "titre": "Les 8 premières entreprises formées la recommandent 9,3 sur 10.",
+    "sous_titre": "Note moyenne à la question : recommanderiez-vous cette formation à vos collègues ?",
+    "verbatims": [
+      "Dynamique et enthousiaste, sur un sujet qui peut pourtant faire peur.",
+      "Beaucoup d'informations, mais très cohérentes entre elles, et utiles.",
+      "Connaissances et contexte le matin, outils opérationnels l'après-midi.",
+      "Les exercices pratiques : jeux, quizz, prompts."
+    ],
+    "caution": "Liatopie est porté par Ecotopie, qui accompagne les PME depuis plusieurs années, plus de 40 à ce jour. Formations certifiées Qualiopi, finançables par votre OPCO."
   },
   "contact": {
     "titre": "Un premier échange, pas un engagement.",
     "sous_titre": "Dites-nous où vous en êtes. On vous répond sous 48h.",
     "item_1": "Vous n'avez pas de projet précis ? Pas de problème.",
-    "item_2": "Vous voulez juste comprendre si c'est fait pour vous ? C'est exactement ça."
+    "item_2": "Vous voulez juste comprendre si c'est fait pour vous ? C'est exactement ça.",
+    "opco_info": "Les étapes 01 et 02 sont finançables par votre OPCO. Selon votre branche et votre situation, le reste à charge peut être fortement réduit, parfois nul. On fait le point avec vous dès le premier échange."
   }
 }
