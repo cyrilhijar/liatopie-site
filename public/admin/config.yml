@@ -23,7 +23,7 @@ collections:
               - { label: "Titre H1", name: title, widget: string }
               - { label: "Sous-titre", name: subtitle, widget: text }
               - { label: "Bouton principal", name: cta_primary, widget: string }
-              - { label: "Bouton secondaire", name: cta_secondary, widget: string }
+              - { label: "Bouton secondaire (lien discret)", name: cta_secondary, widget: string }
 
           - label: "POURQUOI LIATOPIE"
             name: pourquoi
@@ -37,6 +37,7 @@ collections:
                 fields:
                   - { label: "Titre", name: titre, widget: string }
                   - { label: "Corps", name: corps, widget: text }
+                  - { label: "Phrase gain (optionnel — carte 3 uniquement)", name: gain_phrase, widget: text, required: false }
 
           - label: "POUR QUI"
             name: pour_qui
@@ -57,7 +58,8 @@ collections:
             widget: object
             fields:
               - { label: "Titre", name: titre, widget: string }
-              - { label: "Introduction", name: intro, widget: text }
+              - { label: "Mécanisme de la cascade", name: cascade_mecanisme, widget: text }
+              - { label: "Note sur l'arrêt à tout moment", name: intro, widget: text }
               - label: "Étapes (5)"
                 name: etapes
                 widget: list
@@ -67,6 +69,22 @@ collections:
                   - { label: "Détail (durée / financement)", name: detail, widget: string }
                   - { label: "Description", name: corps, widget: text }
                   - { label: "Livrable", name: livrable, widget: string }
+                  - { label: "Prix", name: prix, widget: text }
+
+          - label: "PREUVE SOCIALE"
+            name: preuve_sociale
+            widget: object
+            fields:
+              - { label: "Titre (note /10)", name: titre, widget: string }
+              - { label: "Sous-titre (question posée)", name: sous_titre, widget: text }
+              - label: "Verbatims"
+                name: verbatims
+                widget: list
+                field:
+                  label: "Citation"
+                  name: item
+                  widget: text
+              - { label: "Mention Qualiopi / Ecotopie", name: caution, widget: text }
 
           - label: "FORMULAIRE CONTACT"
             name: contact
@@ -76,3 +94,4 @@ collections:
               - { label: "Sous-titre", name: sous_titre, widget: string }
               - { label: "Item liste 1", name: item_1, widget: string }
               - { label: "Item liste 2", name: item_2, widget: string }
+              - { label: "Note financement OPCO", name: opco_info, widget: text }
