@@ -12,7 +12,7 @@ const steps = comment.etapes;
   <header class="nav-header" id="top">
     <div class="container nav-inner">
       <a href="/#top" class="nav-logo" aria-label="Liatopie — accueil">
-        <span class="logo-text">LIATOPIE</span>
+        <span class="logo-text">L<span class="logo-ia">IA</span>TOPIE<span class="logo-dot">.</span></span>
       </a>
 
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Ouvrir le menu">
@@ -270,7 +270,7 @@ const steps = comment.etapes;
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="logo-text">LIATOPIE</span>
+        <span class="logo-text">L<span class="logo-ia">IA</span>TOPIE<span class="logo-dot">.</span></span>
         <p>On aide les PME à mettre l'IA au travail sans y perdre le contrôle, leurs données ni leur savoir-faire.</p>
       </div>
 
@@ -315,6 +315,9 @@ const steps = comment.etapes;
 }
 
 .nav-logo { text-decoration: none; }
+
+.logo-ia { color: var(--cuivre); }
+.logo-dot { color: var(--cuivre); }
 
 .logo-text {
   font-family: var(--font-heading);
@@ -711,7 +714,10 @@ cite {
   padding: var(--sp5) var(--sp3);
 }
 
-.footer-brand .logo-text { display: block; margin-bottom: var(--sp1); }
+.footer-brand .logo-ia { color: var(--cuivre); }
+.logo-dot { color: var(--cuivre); }
+
+.logo-text { display: block; margin-bottom: var(--sp1); }
 .footer-brand p { font-size: 0.875rem; color: rgba(243,241,237,0.65); max-width: 280px; }
 
 .footer-nav, .footer-legal {
