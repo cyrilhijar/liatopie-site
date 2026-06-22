@@ -25,15 +25,15 @@
     ]
   },
   "pour_qui": {
-    "titre": "Pas fait pour les entreprises qui ont déjà quelqu'un pour ça.",
-    "corps_1": "Vous dirigez une entreprise. Vos équipes ont déjà commencé à utiliser l'IA, chacun à sa façon, sans règles communes. Vous sentez qu'il faut cadrer tout ça. Mais identifier où l'IA crée vraiment de la valeur dans votre contexte, poser les règles qui valent quelque chose, former vos équipes sans improviser : c'est un travail à part entière, et personne ne le fait à votre place.",
-    "stat_texte": "65% des dirigeants de PME non-utilisateurs ne savent pas où l'IA créerait de la valeur dans leur entreprise. Ce n'est pas un aveu de faiblesse. C'est la réalité d'un marché qui a avancé plus vite que les méthodes.",
     "stat_source": "Bpifrance, 2026",
-    "corps_2": "Le plus souvent, la gouvernance repose sur une seule personne, sans plan de formation, sans cadre formalisé. Ça tient jusqu'à ce que ça ne tienne plus.",
-    "corps_2_source": "Alegria, 2026",
     "encart_quote": "Un dirigeant sur trois demande aujourd'hui des directives claires pour adopter l'IA sans prendre de risque.",
+    "stat_texte": "65% des dirigeants de PME non-utilisateurs ne savent pas où l'IA créerait de la valeur dans leur entreprise. Ce n'est pas un aveu de faiblesse. C'est la réalité d'un marché qui a avancé plus vite que les méthodes.",
     "encart_source": "Sharp Europe, 2025",
-    "encart_cta": "C'est précisément ce que Liatopie installe."
+    "titre": "Pas fait pour les entreprises qui ont déjà quelqu'un pour ça.",
+    "encart_cta": "C'est précisément ce que Liatopie installe.",
+    "corps_1": "Vous dirigez une entreprise. Vos équipes ont déjà commencé à utiliser l'IA, chacun à sa façon, sans règles communes. Vous sentez qu'il faut cadrer tout ça. Mais identifier où l'IA crée vraiment de la valeur dans votre contexte, poser les règles qui valent quelque chose, former vos équipes sans improviser : c'est un travail à part entière, et personne ne le fait à votre place.",
+    "corps_2": "Le plus souvent, la gouvernance repose sur une seule personne, sans plan de formation, sans cadre formalisé. Ça tient jusqu'à ce que ça ne tienne plus.",
+    "corps_2_source": "Alegria, 2026"
   },
   "comment": {
     "titre": "Cinq étapes. À chaque fois, un livrable que vous gardez.",
@@ -83,8 +83,8 @@
     ]
   },
   "preuve_sociale": {
-    "titre": "Les 8 premières entreprises formées la recommandent 9,3 sur 10.",
-    "sous_titre": "Note moyenne à la question : recommanderiez-vous cette formation à vos collègues ?",
+    "titre": "100% des entreprises formées recommandent cette formation.",
+    "sous_titre": "Note moyenne à la question : recommanderiez-vous cette formation ?",
     "verbatims": [
       "Dynamique et enthousiaste, sur un sujet qui peut pourtant faire peur.",
       "Beaucoup d'informations, mais très cohérentes entre elles, et utiles.",
