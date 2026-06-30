@@ -1,0 +1,93 @@
+{
+  "intro": {
+    "eyebrow": "Liatopie — Diagnostic mémoire technique",
+    "titre": "Combien de temps perdez-vous vraiment sur vos réponses à appels d'offres ?",
+    "lede": "Avant de parler de cadre ou de méthode, regardons les chiffres. Une réponse à appel d'offres se découpe en neuf phases, chacune avec son propre coût en temps. Indiquez où vous en êtes sur chacune et recevez une estimation de votre potentiel de gain.",
+    "phases_titre": "Les neuf phases d'une réponse à appel d'offres",
+    "phases": [
+      { "nom": "Veille et détection de l'avis", "temps": "0,5 h en moyenne" },
+      { "nom": "Lecture de l'avis (objet, calendrier, contraintes)", "temps": "1 h en moyenne" },
+      { "nom": "Téléchargement et lecture du DCE (RC, AE, CCAP, CCTP)", "temps": "2 h en moyenne" },
+      { "nom": "Décision Go / No-Go", "temps": "1 h en moyenne" },
+      { "nom": "Préparation administrative (attestations, références)", "temps": "2,5 h en moyenne" },
+      { "nom": "Analyse technique (exigences, risques)", "temps": "4 h en moyenne" },
+      { "nom": "Chiffrage et sourcing fournisseurs", "temps": "5 h en moyenne" },
+      { "nom": "Rédaction du mémoire technique", "temps": "4 h en moyenne" },
+      { "nom": "Relecture, assemblage, dépôt", "temps": "1,5 h en moyenne" }
+    ],
+    "source_note": "Temps moyens construits à partir de sources spécialisées en marchés publics et en réponse aux appels d'offres BTP. Total moyen observé : environ 21,5 heures par dossier.",
+    "questions_titre": "Et vous, où passez-vous le plus de temps ?",
+    "questions": [
+      {
+        "label": "Question 1",
+        "texte": "Repérer un avis, comprendre l'objet et le calendrier, décider d'y répondre <em>(veille, lecture de l'avis, Go / No-Go)</em>",
+        "options": [
+          { "texte": "Moins d'1 h", "val": 0.75 },
+          { "texte": "1 à 2 h", "val": 1.5 },
+          { "texte": "2 à 4 h", "val": 3 },
+          { "texte": "Plus de 4 h", "val": 5 }
+        ]
+      },
+      {
+        "label": "Question 2",
+        "texte": "Télécharger et lire le DCE, identifier les exigences et les risques <em>(lecture du DCE, analyse technique)</em>",
+        "options": [
+          { "texte": "Moins de 3 h", "val": 2 },
+          { "texte": "3 à 6 h", "val": 4.5 },
+          { "texte": "6 à 9 h", "val": 7.5 },
+          { "texte": "Plus de 9 h", "val": 10 }
+        ]
+      },
+      {
+        "label": "Question 3",
+        "texte": "Consulter vos fournisseurs et construire votre estimation <em>(chiffrage, sourcing)</em>",
+        "options": [
+          { "texte": "Moins de 2 h", "val": 1 },
+          { "texte": "2 à 5 h", "val": 3.5 },
+          { "texte": "5 à 8 h", "val": 6.5 },
+          { "texte": "Plus de 8 h", "val": 9 }
+        ]
+      },
+      {
+        "label": "Question 4",
+        "texte": "Rassembler attestations et références, rédiger votre mémoire technique <em>(préparation administrative, rédaction de l'offre)</em>",
+        "options": [
+          { "texte": "Moins de 4 h", "val": 2 },
+          { "texte": "4 à 8 h", "val": 6 },
+          { "texte": "8 à 12 h", "val": 10 },
+          { "texte": "Plus de 12 h", "val": 13 }
+        ]
+      },
+      {
+        "label": "Question 5",
+        "texte": "Vérifier, signer et déposer votre réponse <em>(relecture, assemblage, dépôt)</em>",
+        "options": [
+          { "texte": "Moins d'1 h", "val": 0.5 },
+          { "texte": "1 à 2 h", "val": 1.5 },
+          { "texte": "2 à 3 h", "val": 2.5 },
+          { "texte": "Plus de 3 h", "val": 3.5 }
+        ]
+      }
+    ],
+    "cta": "Voir mon potentiel de gain"
+  },
+  "resultat": {
+    "eyebrow": "Votre estimation",
+    "titre": "Votre potentiel de gain de temps par dossier",
+    "gain_label": "gagnées par réponse à appel d'offres, soit",
+    "gain_suffix": "de votre temps actuel",
+    "stat_avant_label": "temps actuel par dossier",
+    "stat_apres_label": "temps estimé avec un cadre structuré",
+    "piliers_intro": "Le temps gagné n'est pas le seul indicateur qui compte. Notre approche s'appuie sur six piliers pour vous aider à agir en conscience, pas seulement à aller plus vite.",
+    "piliers": ["Souveraineté", "Gouvernance", "Transparence", "Éthique", "Compétences", "Impact environnemental"],
+    "video_intro": "Une preuve plutôt qu'une promesse : voici comment nous avons identifié des entreprises répondant à des appels d'offres publics, en quelques minutes, avec un prompt construit pour Claude in Chrome.",
+    "lead_titre": "Recevoir le détail de votre analyse",
+    "lead_lede": "Laissez vos coordonnées, nous vous rappelons sous 48 h pour regarder ensemble où ce temps peut être réinvesti.",
+    "lead_cta": "Recevoir mon analyse"
+  },
+  "merci": {
+    "eyebrow": "C'est noté",
+    "titre": "Merci, votre analyse est en route",
+    "lede": "Nous revenons vers vous sous 48 h pour en discuter de vive voix."
+  }
+}

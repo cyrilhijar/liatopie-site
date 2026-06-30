@@ -95,3 +95,69 @@ collections:
               - { label: "Item liste 1", name: item_1, widget: string }
               - { label: "Item liste 2", name: item_2, widget: string }
               - { label: "Note financement OPCO", name: opco_info, widget: text }
+
+  - name: diagnostic
+    label: "Diagnostic temps AO"
+    files:
+      - name: diagnostic
+        label: "Contenu du diagnostic"
+        file: src/content/diagnostic.json
+        fields:
+
+          - label: "Écran 1 — Introduction"
+            name: intro
+            widget: object
+            fields:
+              - { label: "Bandeau (eyebrow)", name: eyebrow, widget: string }
+              - { label: "Titre H1", name: titre, widget: string }
+              - { label: "Texte d'introduction", name: lede, widget: text }
+              - { label: "Titre du tableau des phases", name: phases_titre, widget: string }
+              - label: "Phases (9)"
+                name: phases
+                widget: list
+                fields:
+                  - { label: "Nom de la phase", name: nom, widget: string }
+                  - { label: "Temps moyen", name: temps, widget: string }
+              - { label: "Note de source", name: source_note, widget: text }
+              - { label: "Titre avant les questions", name: questions_titre, widget: string }
+              - label: "Questions (5)"
+                name: questions
+                widget: list
+                fields:
+                  - { label: "Libellé (ex: Question 1)", name: label, widget: string }
+                  - { label: "Texte de la question", name: texte, widget: text }
+                  - label: "Options de réponse (4)"
+                    name: options
+                    widget: list
+                    fields:
+                      - { label: "Texte de l'option", name: texte, widget: string }
+                      - { label: "Valeur en heures", name: val, widget: number, value_type: float }
+              - { label: "Texte du bouton", name: cta, widget: string }
+
+          - label: "Écran 2 — Résultats"
+            name: resultat
+            widget: object
+            fields:
+              - { label: "Bandeau (eyebrow)", name: eyebrow, widget: string }
+              - { label: "Titre", name: titre, widget: string }
+              - { label: "Texte avant le pourcentage", name: gain_label, widget: string }
+              - { label: "Texte après le pourcentage", name: gain_suffix, widget: string }
+              - { label: "Label stat — avant", name: stat_avant_label, widget: string }
+              - { label: "Label stat — après", name: stat_apres_label, widget: string }
+              - { label: "Intro des piliers", name: piliers_intro, widget: text }
+              - label: "Piliers (6 tags)"
+                name: piliers
+                widget: list
+                field: { label: "Pilier", name: pilier, widget: string }
+              - { label: "Intro de la vidéo", name: video_intro, widget: text }
+              - { label: "Titre du formulaire", name: lead_titre, widget: string }
+              - { label: "Sous-titre du formulaire", name: lead_lede, widget: text }
+              - { label: "Bouton du formulaire", name: lead_cta, widget: string }
+
+          - label: "Écran 3 — Merci"
+            name: merci
+            widget: object
+            fields:
+              - { label: "Bandeau (eyebrow)", name: eyebrow, widget: string }
+              - { label: "Titre", name: titre, widget: string }
+              - { label: "Message", name: lede, widget: text }
