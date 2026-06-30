@@ -1,0 +1,491 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Diagnostic temps de réponse aux appels d'offres — Liatopie"
+  description="Estimez votre potentiel de gain de temps sur vos réponses à appels d'offres en cinq questions."
+  noindex={true}
+>
+
+<header class="diag-header">
+  <div class="container diag-header-inner">
+    <a href="/" class="logo-text" aria-label="Retour à l'accueil">LIATOPIE</a>
+    <a href="/" class="back-link">Retour à l'accueil</a>
+  </div>
+</header>
+
+<main class="diag-main">
+  <div class="wrap">
+
+    <!-- INTRO -->
+    <div id="intro-step">
+      <span class="eyebrow">Liatopie — Diagnostic mémoire technique</span>
+      <h1>Combien de temps perdez-vous vraiment sur vos réponses à appels d'offres ?</h1>
+      <p class="lede">Avant de parler de cadre ou de méthode, regardons les chiffres. Une réponse à appel d'offres se découpe en neuf phases, chacune avec son propre coût en temps. Indiquez où vous en êtes sur chacune et recevez une estimation de votre potentiel de gain.</p>
+
+      <div class="phases-card">
+        <h3>Les neuf phases d'une réponse à appel d'offres</h3>
+        <div class="phase-row"><span class="phase-name">Veille et détection de l'avis</span><span class="phase-time">0,5 h en moyenne</span></div>
+        <div class="phase-row"><span class="phase-name">Lecture de l'avis (objet, calendrier, contraintes)</span><span class="phase-time">1 h en moyenne</span></div>
+        <div class="phase-row"><span class="phase-name">Téléchargement et lecture du DCE (RC, AE, CCAP, CCTP)</span><span class="phase-time">2 h en moyenne</span></div>
+        <div class="phase-row"><span class="phase-name">Décision Go / No-Go</span><span class="phase-time">1 h en moyenne</span></div>
+        <div class="phase-row"><span class="phase-name">Préparation administrative (attestations, références)</span><span class="phase-time">2,5 h en moyenne</span></div>
+        <div class="phase-row"><span class="phase-name">Analyse technique (exigences, risques)</span><span class="phase-time">4 h en moyenne</span></div>
+        <div class="phase-row"><span class="phase-name">Chiffrage et sourcing fournisseurs</span><span class="phase-time">5 h en moyenne</span></div>
+        <div class="phase-row"><span class="phase-name">Rédaction du mémoire technique</span><span class="phase-time">4 h en moyenne</span></div>
+        <div class="phase-row"><span class="phase-name">Relecture, assemblage, dépôt</span><span class="phase-time">1,5 h en moyenne</span></div>
+        <p class="source-note">Temps moyens construits à partir de sources spécialisées en marchés publics et en réponse aux appels d'offres BTP. Total moyen observé : environ 21,5 heures par dossier.</p>
+      </div>
+
+      <h2>Et vous, où passez-vous le plus de temps ?</h2>
+
+      <div class="question-block" data-q="1">
+        <div class="q-label">Question 1</div>
+        <div class="q-text">Repérer un avis, comprendre l'objet et le calendrier, décider d'y répondre <em>(veille, lecture de l'avis, Go / No-Go)</em></div>
+        <div class="options">
+          <div class="opt" data-val="0.75">Moins d'1 h</div>
+          <div class="opt" data-val="1.5">1 à 2 h</div>
+          <div class="opt" data-val="3">2 à 4 h</div>
+          <div class="opt" data-val="5">Plus de 4 h</div>
+        </div>
+      </div>
+
+      <div class="question-block" data-q="2">
+        <div class="q-label">Question 2</div>
+        <div class="q-text">Télécharger et lire le DCE, identifier les exigences et les risques <em>(lecture du DCE, analyse technique)</em></div>
+        <div class="options">
+          <div class="opt" data-val="2">Moins de 3 h</div>
+          <div class="opt" data-val="4.5">3 à 6 h</div>
+          <div class="opt" data-val="7.5">6 à 9 h</div>
+          <div class="opt" data-val="10">Plus de 9 h</div>
+        </div>
+      </div>
+
+      <div class="question-block" data-q="3">
+        <div class="q-label">Question 3</div>
+        <div class="q-text">Consulter vos fournisseurs et construire votre estimation <em>(chiffrage, sourcing)</em></div>
+        <div class="options">
+          <div class="opt" data-val="1">Moins de 2 h</div>
+          <div class="opt" data-val="3.5">2 à 5 h</div>
+          <div class="opt" data-val="6.5">5 à 8 h</div>
+          <div class="opt" data-val="9">Plus de 8 h</div>
+        </div>
+      </div>
+
+      <div class="question-block" data-q="4">
+        <div class="q-label">Question 4</div>
+        <div class="q-text">Rassembler attestations et références, rédiger votre mémoire technique <em>(préparation administrative, rédaction de l'offre)</em></div>
+        <div class="options">
+          <div class="opt" data-val="2">Moins de 4 h</div>
+          <div class="opt" data-val="6">4 à 8 h</div>
+          <div class="opt" data-val="10">8 à 12 h</div>
+          <div class="opt" data-val="13">Plus de 12 h</div>
+        </div>
+      </div>
+
+      <div class="question-block" data-q="5">
+        <div class="q-label">Question 5</div>
+        <div class="q-text">Vérifier, signer et déposer votre réponse <em>(relecture, assemblage, dépôt)</em></div>
+        <div class="options">
+          <div class="opt" data-val="0.5">Moins d'1 h</div>
+          <div class="opt" data-val="1.5">1 à 2 h</div>
+          <div class="opt" data-val="2.5">2 à 3 h</div>
+          <div class="opt" data-val="3.5">Plus de 3 h</div>
+        </div>
+      </div>
+
+      <div class="cta-row">
+        <button class="btn-primary" id="submit-btn" disabled>Voir mon potentiel de gain</button>
+        <p class="progress-note" id="progress-note">0 sur 5 questions répondues</p>
+      </div>
+    </div>
+
+    <!-- RESULT -->
+    <div id="result" style="display:none">
+      <div class="result-hero">
+        <span class="eyebrow result-eyebrow">Votre estimation</span>
+        <h2 class="result-title">Votre potentiel de gain de temps par dossier</h2>
+        <div class="big-number" id="gain-hours">0 h</div>
+        <p class="big-number-label">gagnées par réponse à appel d'offres, soit <span id="gain-pct">0 %</span> de votre temps actuel</p>
+        <div class="stat-row">
+          <div class="stat"><div class="val" id="stat-today">0 h</div><div class="lbl">temps actuel par dossier</div></div>
+          <div class="stat"><div class="val" id="stat-after">0 h</div><div class="lbl">temps estimé avec un cadre structuré</div></div>
+        </div>
+      </div>
+
+      <div class="piliers-card">
+        <p><strong>Le temps gagné n'est pas le seul indicateur qui compte.</strong> Notre approche s'appuie sur six piliers pour vous aider à agir en conscience, pas seulement à aller plus vite.</p>
+        <div class="piliers-list">
+          <span class="pilier-tag">Souveraineté</span>
+          <span class="pilier-tag">Gouvernance</span>
+          <span class="pilier-tag">Transparence</span>
+          <span class="pilier-tag">Éthique</span>
+          <span class="pilier-tag">Compétences</span>
+          <span class="pilier-tag">Impact environnemental</span>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <p class="video-intro">Une preuve plutôt qu'une promesse : voici comment nous avons identifié des entreprises répondant à des appels d'offres publics, en quelques minutes, avec un prompt construit pour Claude in Chrome.</p>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube-nocookie.com/embed/NNTKxwXtk6A" title="Démonstration Liatopie" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="no-referrer"></iframe>
+        </div>
+      </div>
+
+      <div class="lead-card">
+        <h3>Recevoir le détail de votre analyse</h3>
+        <p class="lede2">Laissez vos coordonnées, nous vous rappelons sous 48 h pour regarder ensemble où ce temps peut être réinvesti.</p>
+        <div class="two-col">
+          <div class="field"><label for="prenom">Prénom</label><input type="text" id="prenom" /></div>
+          <div class="field"><label for="nom">Nom</label><input type="text" id="nom" /></div>
+        </div>
+        <div class="field"><label for="entreprise">Entreprise</label><input type="text" id="entreprise" /></div>
+        <div class="two-col">
+          <div class="field"><label for="email">Email</label><input type="email" id="email" /></div>
+          <div class="field"><label for="tel">Téléphone</label><input type="tel" id="tel" /></div>
+        </div>
+        <div class="cta-row" style="margin-top:18px">
+          <button class="btn-primary" id="lead-submit">Recevoir mon analyse</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- THANK YOU -->
+    <div id="thankyou" style="display:none; text-align:center; padding:40px 0">
+      <span class="eyebrow" style="color:var(--slate)">C'est noté</span>
+      <h2>Merci, votre analyse est en route</h2>
+      <p class="lede">Nous revenons vers vous sous 48 h pour en discuter de vive voix.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer class="diag-footer">
+  <div class="container">
+    <p>© 2026 Liatopie · SARL Ecotopie ·
+      <a href="/mentions-legales">Mentions légales</a> ·
+      <a href="/politique-de-confidentialite">Politique de confidentialité</a>
+    </p>
+  </div>
+</footer>
+
+</Layout>
+
+<style>
+/* ── Layout ─────────────────────────────────────────── */
+.diag-header {
+  background: var(--petrole);
+  padding: 0 var(--sp3);
+  height: 68px;
+}
+.diag-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.back-link {
+  color: rgba(243,241,237,0.75);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color var(--tr);
+}
+.back-link:hover { color: var(--ivoire); }
+
+.diag-main {
+  background: var(--ivoire);
+  min-height: 70vh;
+  padding-bottom: 80px;
+}
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 0;
+}
+
+.diag-footer {
+  background: var(--graphite);
+  padding: var(--sp3);
+  text-align: center;
+}
+.diag-footer p {
+  font-size: 0.8125rem;
+  color: rgba(243,241,237,0.5);
+  margin: 0;
+}
+.diag-footer a {
+  color: rgba(243,241,237,0.7);
+  text-decoration: none;
+}
+.diag-footer a:hover { color: var(--ivoire); }
+
+/* ── Typography ─────────────────────────────────────── */
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cuivre);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+h1 { font-size: clamp(1.5rem, 3vw, 1.9rem); line-height: 1.25; margin-bottom: 12px; }
+h2 { font-size: 1.3rem; margin-bottom: 16px; color: var(--petrole); }
+.lede { font-size: 1.05rem; color: var(--graphite); opacity: 0.9; margin-bottom: 28px; }
+
+/* ── Phases card ────────────────────────────────────── */
+.phases-card {
+  background: #fff;
+  border: 1px solid rgba(0,69,101,0.12);
+  border-radius: 10px;
+  padding: 24px 26px;
+  margin-bottom: 36px;
+}
+.phases-card h3 { font-size: 1rem; margin-bottom: 14px; }
+.phase-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(0,69,101,0.07);
+  font-size: 0.92rem;
+}
+.phase-row:last-of-type { border-bottom: none; }
+.phase-name { flex: 1; color: var(--graphite); }
+.phase-time { color: var(--petrole); font-weight: 600; white-space: nowrap; }
+.source-note {
+  font-size: 0.78rem;
+  color: var(--graphite);
+  opacity: 0.65;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(0,69,101,0.15);
+  margin-bottom: 0;
+}
+
+/* ── Questions ──────────────────────────────────────── */
+.question-block {
+  background: #fff;
+  border: 1px solid rgba(0,69,101,0.12);
+  border-radius: 10px;
+  padding: 24px 26px;
+  margin-bottom: 18px;
+}
+.q-label { font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--slate); font-weight: 600; margin-bottom: 6px; }
+.q-text { font-size: 1rem; margin-bottom: 16px; color: var(--graphite); }
+.options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+@media (max-width: 520px) { .options { grid-template-columns: 1fr; } }
+.opt {
+  border: 1.5px solid rgba(0,69,101,0.2);
+  background: var(--ivoire);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.9rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  color: var(--graphite);
+  user-select: none;
+}
+.opt:hover { border-color: var(--petrole); }
+.opt.selected {
+  background: var(--petrole);
+  border-color: var(--petrole);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ── CTA ────────────────────────────────────────────── */
+.cta-row { margin-top: 28px; text-align: center; }
+.btn-primary {
+  background: var(--cuivre);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 36px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Sora', system-ui, sans-serif;
+  transition: background 0.15s ease;
+}
+.btn-primary:hover { background: #a35f24; }
+.btn-primary:disabled { background: #c9b39e; cursor: not-allowed; }
+.progress-note { font-size: 0.82rem; color: var(--graphite); opacity: 0.6; margin-top: 10px; margin-bottom: 0; }
+
+/* ── Result hero ────────────────────────────────────── */
+.result-hero {
+  background: var(--petrole);
+  color: #fff;
+  border-radius: 12px;
+  padding: 34px 30px;
+  text-align: center;
+  margin-bottom: 28px;
+}
+.result-eyebrow { color: var(--slate); }
+.result-title { color: #fff; margin-bottom: 8px; }
+.big-number {
+  font-family: 'Sora', system-ui, sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--cuivre);
+  line-height: 1;
+  margin: 10px 0;
+}
+.big-number-label { font-size: 0.95rem; opacity: 0.9; margin-bottom: 0; }
+.stat-row { display: flex; justify-content: center; gap: 36px; margin-top: 22px; flex-wrap: wrap; }
+.stat { text-align: center; }
+.stat .val { font-size: 1.4rem; font-weight: 600; font-family: 'Sora', system-ui, sans-serif; }
+.stat .lbl { font-size: 0.78rem; opacity: 0.8; }
+
+/* ── Piliers ────────────────────────────────────────── */
+.piliers-card {
+  background: #fff;
+  border-left: 4px solid var(--slate);
+  border-radius: 8px;
+  padding: 22px 24px;
+  margin-bottom: 28px;
+}
+.piliers-card p { font-size: 0.95rem; margin-bottom: 14px; }
+.piliers-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.pilier-tag {
+  background: rgba(91,154,160,0.15);
+  color: var(--petrole);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 16px;
+}
+
+/* ── Video ──────────────────────────────────────────── */
+.video-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  border: 1px solid rgba(0,69,101,0.12);
+}
+.video-intro { padding: 18px 22px 0; font-size: 0.92rem; margin-bottom: 0; }
+.video-wrap { position: relative; width: 100%; padding-top: 56.25%; margin-top: 14px; }
+.video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+/* ── Lead form ──────────────────────────────────────── */
+.lead-card {
+  background: #fff;
+  border: 1.5px solid var(--cuivre);
+  border-radius: 10px;
+  padding: 26px;
+}
+.lead-card h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.lede2 { font-size: 0.9rem; opacity: 0.85; margin-bottom: 18px; }
+.field { margin-bottom: 12px; }
+.field label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--petrole); margin-bottom: 5px; }
+.field input {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1.5px solid rgba(0,69,101,0.2);
+  border-radius: 7px;
+  font-size: 0.92rem;
+  font-family: inherit;
+  background: var(--ivoire);
+}
+.field input:focus { outline: none; border-color: var(--petrole); background: #fff; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 520px) { .two-col { grid-template-columns: 1fr; } }
+</style>
+
+<script>
+  const WEBHOOK = 'https://hook.eu1.make.com/vfyd4pesv3cyh1ku7bhjf99gx3dc1cw2';
+  const gainRates: Record<number, number> = { 1: 0.42, 2: 0.38, 3: 0.15, 4: 0.58, 5: 0.25 };
+  const answers: Record<number, number> = {};
+
+  document.querySelectorAll<HTMLElement>('.question-block').forEach(block => {
+    const q = Number(block.dataset.q);
+    block.querySelectorAll<HTMLElement>('.opt').forEach(opt => {
+      opt.addEventListener('click', () => {
+        block.querySelectorAll('.opt').forEach(o => o.classList.remove('selected'));
+        opt.classList.add('selected');
+        answers[q] = parseFloat(opt.dataset.val ?? '0');
+        updateProgress();
+      });
+    });
+  });
+
+  function updateProgress() {
+    const count = Object.keys(answers).length;
+    const note = document.getElementById('progress-note');
+    const btn = document.getElementById('submit-btn') as HTMLButtonElement;
+    if (note) note.textContent = count + ' sur 5 questions répondues';
+    if (btn) btn.disabled = count < 5;
+  }
+
+  document.getElementById('submit-btn')?.addEventListener('click', () => {
+    let totalToday = 0;
+    let totalGain = 0;
+    for (let q = 1; q <= 5; q++) {
+      const t = answers[q] ?? 0;
+      totalToday += t;
+      totalGain += t * (gainRates[q] ?? 0);
+    }
+    const totalAfter = totalToday - totalGain;
+    const pct = Math.round((totalGain / totalToday) * 100);
+
+    const fmt = (n: number) => n.toFixed(1).replace('.', ',') + ' h';
+    document.getElementById('gain-hours')!.textContent = fmt(totalGain);
+    document.getElementById('gain-pct')!.textContent = pct + ' %';
+    document.getElementById('stat-today')!.textContent = fmt(totalToday);
+    document.getElementById('stat-after')!.textContent = fmt(totalAfter);
+
+    // store for webhook
+    (window as any).__diagResult = { gain_hours: totalGain, gain_pct: pct };
+
+    document.getElementById('intro-step')!.style.display = 'none';
+    document.getElementById('result')!.style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  document.getElementById('lead-submit')?.addEventListener('click', async () => {
+    const get = (id: string) => (document.getElementById(id) as HTMLInputElement)?.value.trim() ?? '';
+    const email = get('email');
+    const nom = get('nom');
+    if (!email || !nom) {
+      alert('Merci de renseigner au moins votre nom et votre email.');
+      return;
+    }
+
+    const btn = document.getElementById('lead-submit') as HTMLButtonElement;
+    btn.disabled = true;
+    btn.textContent = 'Envoi en cours...';
+
+    const result = (window as any).__diagResult ?? {};
+
+    try {
+      const res = await fetch(WEBHOOK, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          prenom: get('prenom'),
+          nom,
+          entreprise: get('entreprise'),
+          email,
+          tel: get('tel'),
+          gain_hours: result.gain_hours ?? 0,
+          gain_pct: result.gain_pct ?? 0,
+        }),
+      });
+
+      if (res.ok) {
+        document.getElementById('result')!.style.display = 'none';
+        document.getElementById('thankyou')!.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        throw new Error('HTTP ' + res.status);
+      }
+    } catch {
+      alert('Une erreur est survenue. Merci de réessayer.');
+      btn.disabled = false;
+      btn.textContent = 'Recevoir mon analyse';
+    }
+  });
+</script>
