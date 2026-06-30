@@ -397,16 +397,16 @@ h2 { font-size: 1.3rem; margin-bottom: 16px; color: var(--petrole); }
 
 <script>
   const WEBHOOK = 'https://hook.eu1.make.com/vfyd4pesv3cyh1ku7bhjf99gx3dc1cw2';
-  const gainRates: Record<number, number> = { 1: 0.42, 2: 0.38, 3: 0.15, 4: 0.58, 5: 0.25 };
-  const answers: Record<number, number> = {};
+  const gainRates = { 1: 0.42, 2: 0.38, 3: 0.15, 4: 0.58, 5: 0.25 };
+  const answers = {};
 
-  document.querySelectorAll<HTMLElement>('.question-block').forEach(block => {
+  document.querySelectorAll('.question-block').forEach(function(block) {
     const q = Number(block.dataset.q);
-    block.querySelectorAll<HTMLElement>('.opt').forEach(opt => {
-      opt.addEventListener('click', () => {
-        block.querySelectorAll('.opt').forEach(o => o.classList.remove('selected'));
+    block.querySelectorAll('.opt').forEach(function(opt) {
+      opt.addEventListener('click', function() {
+        block.querySelectorAll('.opt').forEach(function(o) { o.classList.remove('selected'); });
         opt.classList.add('selected');
-        answers[q] = parseFloat(opt.dataset.val ?? '0');
+        answers[q] = parseFloat(opt.dataset.val || '0');
         updateProgress();
       });
     });
@@ -415,38 +415,42 @@ h2 { font-size: 1.3rem; margin-bottom: 16px; color: var(--petrole); }
   function updateProgress() {
     const count = Object.keys(answers).length;
     const note = document.getElementById('progress-note');
-    const btn = document.getElementById('submit-btn') as HTMLButtonElement;
+    const btn = document.getElementById('submit-btn');
     if (note) note.textContent = count + ' sur 5 questions répondues';
     if (btn) btn.disabled = count < 5;
   }
 
-  document.getElementById('submit-btn')?.addEventListener('click', () => {
+  const submitBtn = document.getElementById('submit-btn');
+  if (submitBtn) submitBtn.addEventListener('click', function() {
     let totalToday = 0;
     let totalGain = 0;
     for (let q = 1; q <= 5; q++) {
-      const t = answers[q] ?? 0;
+      const t = answers[q] || 0;
       totalToday += t;
-      totalGain += t * (gainRates[q] ?? 0);
+      totalGain += t * (gainRates[q] || 0);
     }
     const totalAfter = totalToday - totalGain;
     const pct = Math.round((totalGain / totalToday) * 100);
 
-    const fmt = (n: number) => n.toFixed(1).replace('.', ',') + ' h';
-    document.getElementById('gain-hours')!.textContent = fmt(totalGain);
-    document.getElementById('gain-pct')!.textContent = pct + ' %';
-    document.getElementById('stat-today')!.textContent = fmt(totalToday);
-    document.getElementById('stat-after')!.textContent = fmt(totalAfter);
+    function fmt(n) { return n.toFixed(1).replace('.', ',') + ' h'; }
+    document.getElementById('gain-hours').textContent = fmt(totalGain);
+    document.getElementById('gain-pct').textContent = pct + ' %';
+    document.getElementById('stat-today').textContent = fmt(totalToday);
+    document.getElementById('stat-after').textContent = fmt(totalAfter);
 
-    // store for webhook
-    (window as any).__diagResult = { gain_hours: totalGain, gain_pct: pct };
+    window.__diagResult = { gain_hours: totalGain, gain_pct: pct };
 
-    document.getElementById('intro-step')!.style.display = 'none';
-    document.getElementById('result')!.style.display = 'block';
+    document.getElementById('intro-step').style.display = 'none';
+    document.getElementById('result').style.display = 'block';
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  document.getElementById('lead-submit')?.addEventListener('click', async () => {
-    const get = (id: string) => (document.getElementById(id) as HTMLInputElement)?.value.trim() ?? '';
+  const leadSubmit = document.getElementById('lead-submit');
+  if (leadSubmit) leadSubmit.addEventListener('click', async function() {
+    function get(id) {
+      const el = document.getElementById(id);
+      return el ? el.value.trim() : '';
+    }
     const email = get('email');
     const nom = get('nom');
     if (!email || !nom) {
@@ -454,11 +458,11 @@ h2 { font-size: 1.3rem; margin-bottom: 16px; color: var(--petrole); }
       return;
     }
 
-    const btn = document.getElementById('lead-submit') as HTMLButtonElement;
+    const btn = document.getElementById('lead-submit');
     btn.disabled = true;
     btn.textContent = 'Envoi en cours...';
 
-    const result = (window as any).__diagResult ?? {};
+    const result = window.__diagResult || {};
 
     try {
       const res = await fetch(WEBHOOK, {
@@ -466,23 +470,23 @@ h2 { font-size: 1.3rem; margin-bottom: 16px; color: var(--petrole); }
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           prenom: get('prenom'),
-          nom,
+          nom: nom,
           entreprise: get('entreprise'),
-          email,
+          email: email,
           tel: get('tel'),
-          gain_hours: result.gain_hours ?? 0,
-          gain_pct: result.gain_pct ?? 0,
+          gain_hours: result.gain_hours || 0,
+          gain_pct: result.gain_pct || 0,
         }),
       });
 
       if (res.ok) {
-        document.getElementById('result')!.style.display = 'none';
-        document.getElementById('thankyou')!.style.display = 'block';
+        document.getElementById('result').style.display = 'none';
+        document.getElementById('thankyou').style.display = 'block';
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
         throw new Error('HTTP ' + res.status);
       }
-    } catch {
+    } catch(e) {
       alert('Une erreur est survenue. Merci de réessayer.');
       btn.disabled = false;
       btn.textContent = 'Recevoir mon analyse';
