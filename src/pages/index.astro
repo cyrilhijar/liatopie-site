@@ -3,39 +3,44 @@ import Layout from '../layouts/Layout.astro';
 import { getHomePage } from '../lib/wordpress';
 import fallback from '../content/home.json';
 
-// Essaie WordPress, retombe sur home.json si indisponible
 const wp = await getHomePage();
 
-const hero = wp ? {
-  title: wp.heroTitle,
-  subtitle: wp.heroSubtitle,
-  cta_primary: wp.heroCtaPrimary,
-  cta_secondary: wp.heroCtaSecondary,
+const hero = wp?.hero ? {
+  title:         wp.hero.title,
+  subtitle:      wp.hero.subtitle,
+  cta_primary:   wp.hero.ctaPrimary,
+  cta_secondary: wp.hero.ctaSecondary,
 } : fallback.hero;
 
-const pourquoi = wp ? {
-  title: wp.pourquoiTitle,
-  intro: wp.pourquoiIntro,
+const pourquoi = wp?.pourquoi ? {
+  title: wp.pourquoi.title,
+  intro: wp.pourquoi.intro,
   cards: fallback.pourquoi.cards,
 } : fallback.pourquoi;
 
-const pour_qui = wp ? {
-  ...fallback.pour_qui,
-  titre: wp.pourQuiTitre,
-  corps_1: wp.pourQuiCorps1,
-  stat_texte: wp.pourQuiStatTexte,
-  encart_quote: wp.pourQuiEncartQuote,
+const pour_qui = wp?.pourQui ? {
+  titre:         wp.pourQui.titre,
+  corps_1:       wp.pourQui.corps1,
+  corps_2:       wp.pourQui.corps2,
+  corps_2_source:wp.pourQui.corps2Source,
+  stat_texte:    wp.pourQui.statTexte,
+  stat_source:   wp.pourQui.statSource,
+  encart_quote:  wp.pourQui.encartQuote,
+  encart_source: wp.pourQui.encartSource,
+  encart_cta:    wp.pourQui.encartCta,
 } : fallback.pour_qui;
 
-const contact = wp ? {
-  ...fallback.contact,
-  titre: wp.contactTitre,
-  sous_titre: wp.contactSousTitre,
+const contact = wp?.contact ? {
+  titre:     wp.contact.titre,
+  sous_titre:wp.contact.sousTitre,
+  item_1:    wp.contact.item1,
+  item_2:    wp.contact.item2,
+  opco_info: wp.contact.opcoInfo,
 } : fallback.contact;
 
-const comment = fallback.comment;
+const comment       = fallback.comment;
 const preuve_sociale = fallback.preuve_sociale;
-const steps = comment.etapes;
+const steps         = comment.etapes;
 ---
 <Layout>
 

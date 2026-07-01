@@ -11,27 +11,19 @@ async function gql(query: string) {
   return json.data;
 }
 
-/**
- * Page d'accueil — champs ACF (groupe "Page d'accueil", graphql_field_name: "pageAccueil")
- * Retourne null si le groupe n'est pas encore exposé en GraphQL.
- */
 export async function getHomePage() {
   try {
     const data = await gql(`{
       page(id: "6", idType: DATABASE_ID) {
         pageAccueil {
-          heroTitle
-          heroSubtitle
-          heroCtaPrimary
-          heroCtaSecondary
-          pourquoiTitle
-          pourquoiIntro
-          pourQuiTitre
-          pourQuiCorps1
-          pourQuiStatTexte
-          pourQuiEncartQuote
-          contactTitre
-          contactSousTitre
+          hero { title subtitle ctaPrimary ctaSecondary }
+          pourquoi { title intro }
+          pourQui {
+            titre corps1 corps2 corps2Source
+            statTexte statSource
+            encartQuote encartSource encartCta
+          }
+          contact { titre sousTitre item1 item2 opcoInfo }
         }
       }
     }`);
@@ -41,18 +33,11 @@ export async function getHomePage() {
   }
 }
 
-/**
- * Articles de blog
- */
 export async function getPosts(first = 10) {
   const data = await gql(`{
     posts(first: ${first}) {
       nodes {
-        databaseId
-        slug
-        title
-        date
-        excerpt
+        databaseId slug title date excerpt
         featuredImage { node { sourceUrl altText } }
       }
     }
@@ -60,18 +45,11 @@ export async function getPosts(first = 10) {
   return data?.posts?.nodes ?? [];
 }
 
-/**
- * Etudes de cas
- */
 export async function getEtudesDeCas(first = 10) {
   const data = await gql(`{
     etudesDeCas(first: ${first}) {
       nodes {
-        databaseId
-        slug
-        title
-        date
-        excerpt
+        databaseId slug title date excerpt
         featuredImage { node { sourceUrl altText } }
       }
     }
@@ -79,18 +57,11 @@ export async function getEtudesDeCas(first = 10) {
   return data?.etudesDeCas?.nodes ?? [];
 }
 
-/**
- * Ressources
- */
 export async function getRessources(first = 10) {
   const data = await gql(`{
     ressources(first: ${first}) {
       nodes {
-        databaseId
-        slug
-        title
-        date
-        excerpt
+        databaseId slug title date excerpt
         featuredImage { node { sourceUrl altText } }
       }
     }
