@@ -1,11 +1,42 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import cms from '../content/home.json';
+import { getHomePage } from '../lib/wordpress';
+import fallback from '../content/home.json';
 
-const { hero, pourquoi, pour_qui, comment, preuve_sociale, contact } = cms;
+// Essaie WordPress, retombe sur home.json si indisponible
+const wp = await getHomePage();
+
+const hero = wp ? {
+  title: wp.heroTitle,
+  subtitle: wp.heroSubtitle,
+  cta_primary: wp.heroCtaPrimary,
+  cta_secondary: wp.heroCtaSecondary,
+} : fallback.hero;
+
+const pourquoi = wp ? {
+  title: wp.pourquoiTitle,
+  intro: wp.pourquoiIntro,
+  cards: fallback.pourquoi.cards,
+} : fallback.pourquoi;
+
+const pour_qui = wp ? {
+  ...fallback.pour_qui,
+  titre: wp.pourQuiTitre,
+  corps_1: wp.pourQuiCorps1,
+  stat_texte: wp.pourQuiStatTexte,
+  encart_quote: wp.pourQuiEncartQuote,
+} : fallback.pour_qui;
+
+const contact = wp ? {
+  ...fallback.contact,
+  titre: wp.contactTitre,
+  sous_titre: wp.contactSousTitre,
+} : fallback.contact;
+
+const comment = fallback.comment;
+const preuve_sociale = fallback.preuve_sociale;
 const steps = comment.etapes;
 ---
-
 <Layout>
 
   <!-- ═══ NAVIGATION ═══════════════════════════════════════════════════════ -->
