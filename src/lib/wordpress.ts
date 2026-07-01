@@ -28,7 +28,8 @@ export async function getHomePage() {
       }
     }`);
     return data?.page?.pageAccueil ?? null;
-  } catch {
+  } catch (e) {
+    console.error("[WP] getHomePage error:", e);
     return null;
   }
 }
